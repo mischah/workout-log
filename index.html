@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Workout Log</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	
+	<!-- For iPhone 4 with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/apple-touch-icon.png">
+	
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="img/icons/apple-touch-icon-precomposed.png">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+	<link rel="apple-touch-startup-image" href="img/splash.png">
+	
+	<link rel="stylesheet" href="js/jquery/mobile/jquery.mobile-1.0.css"/>
+	<link rel="stylesheet" href="css/custom.css"/>
+	<script src="js/jquery/jquery-1.6.4.min.js"></script>
+	<script src="js/setup.js"></script>
+	<script src="js/jquery/mobile/jquery.mobile-1.0.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="trainingsplaene">
+	
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Trainieren</h1>
+		</div>
+		
+		<div data-role="content">
+			<ul data-role="listview" data-theme="d">
+				<li><a href="acura.html">Ganzkörpertraining</a></li>
+				<li><a href="audi.html">Zweiersplit - Tag 1</a></li>
+				<li><a href="bmw.html">Zweiersplit - Tag 2</a></li>
+			</ul>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" class="customNavBar">
+				<ul>
+					<li><a href="#" id="train" data-icon="custom" class="ui-btn-active">Trainieren</a></li>
+					<li><a href="#" id="plans" data-icon="custom">Trainingspläne</a></li>
+					<li><a href="#" id="settings" data-icon="custom">Einstellungen</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>
+
+
+
