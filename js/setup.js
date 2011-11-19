@@ -2,7 +2,7 @@
 	
 	$(document).bind("mobileinit", function(){
 	  	// True fixed toolbars in iOS5 
-	  	$.mobile.touchOverflowEnabled = true;
+	  	$.mobile.touchOverflowEnabled = false;
 	  	// Disable toggling toolbars on tap
 	  	$.mobile.fixedToolbars.setTouchToggleEnabled(false);
 	});
