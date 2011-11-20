@@ -19,6 +19,12 @@
   display: -webkit-box;
   display: box;
 }
+/* Misc overwrites
+-------------------------------------------------- */
+.ui-listview .ui-li-icon {
+  height: 18px;
+  width: 18px;
+}
 /* Custom NavBar
 -------------------------------------------------- */
 .customNavBar .ui-btn.ui-btn-up-a {
