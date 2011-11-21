@@ -8,6 +8,41 @@
 	width: 18px;
 }
 
+#exercise input.ui-input-text {
+	margin-left: 5px; 
+	width: 84%;
+}
+
+/* Misc styles
+-------------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	td,th { padding: 5px; }
+	thead {
+		background: #ccc;
+		th {	
+			text-align: center;
+		}
+	}
+	tbody {
+		tr {
+			background: #e3e3e3;
+			&:nth-child(odd) {
+				background-color: #fff;
+			}
+		}
+		td {
+			text-align: center;
+		}
+	} 
+	tfoot td {
+		border-top: 1px #333 solid;
+		font-weight: bold;
+	}
+}
+
 
 /* Custom NavBar
 -------------------------------------------------- */

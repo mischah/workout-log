@@ -25,6 +25,38 @@
   height: 18px;
   width: 18px;
 }
+#exercise input.ui-input-text {
+  margin-left: 5px;
+  width: 84%;
+}
+/* Misc styles
+-------------------------------------------------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table td, table th {
+  padding: 5px;
+}
+table thead {
+  background: #ccc;
+}
+table thead th {
+  text-align: center;
+}
+table tbody tr {
+  background: #e3e3e3;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+table tbody td {
+  text-align: center;
+}
+table tfoot td {
+  border-top: 1px #333 solid;
+  font-weight: bold;
+}
 /* Custom NavBar
 -------------------------------------------------- */
 .customNavBar .ui-btn.ui-btn-up-a {

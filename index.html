@@ -84,6 +84,108 @@
 		
 	</div>
 	<!-- END: Page "training-2" (list choosen workout plan) -->
+	
+	<!-- BEGIN: Page "training-3" (Selected excercise) -->
+	<div data-role="page" id="training-3">
+	
+		<div data-role="header"  data-position="fixed" data-theme="b">
+			<a href="#training-2" data-icon="arrow-l" data-transition="slide" data-direction="reverse">Back</a>
+			<h1>Bankdrücken</h1>
+		</div>
+		
+		<div data-role="content">
+			<div id="stopWatch" data-role="collapsible" data-collapsed="false" data-theme="c" data-content-theme="c">
+				<h3>Stoppuhr</h3>
+				<div>
+					Satzpause: <span class="timer">60</span> Sek. <a href="#" class="startTimer" data-role="button" data-inline="true">Start</a>
+				</div>
+			</div>
+			
+			<form action="#training-3" id="exercise">
+				<fieldset class="ui-grid-a">
+					<div class="ui-block-a">
+						<label for="weightInput" class="ui-hidden-accessible">Weight:</label>
+						<input type="number" name="weightInput" id="weightInput" value="" placeholder="KG"/>
+					</div>
+					<div class="ui-block-b">
+						<label for="repsInput" class="ui-hidden-accessible">Reps:</label>
+						<input type="number" name="repsInput" id="repsInput" value="" placeholder="Wiederholungen"/>
+					</div>	   
+				</fieldset>
+				<button type="submit" data-theme="">Satz speichern</button>
+			</form>
+			
+			<h2>Verlauf</h2>
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">Datum</th>  
+						<th scope="col">Satz</th>  
+						<th scope="col">WH</th>
+						<th scope="col">Gewicht</th>  
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr>
+						<td>17.11.2011</td>
+						<td>3.</td>
+						<td>7</td>
+						<td>60 KG</td>
+					</tr>
+					<tr>
+						<td>17.11.2011</td>
+						<td>2.</td>
+						<td>8</td>
+						<td>60 KG</td>
+					</tr>
+					<tr>
+						<td>17.11.2011</td>
+						<td>1.</td>
+						<td>8</td>
+						<td>60 KG</td>
+					</tr>
+					<tr>
+						<td>14.11.2011</td>
+						<td>3.</td>
+						<td>10</td>
+						<td>55 KG</td>
+					</tr>
+					<tr>
+						<td>14.11.2011</td>
+						<td>2.</td>
+						<td>8</td>
+						<td>55 KG</td>
+					</tr>
+					<tr>
+						<td>14.11.2011</td>
+						<td>1.</td>
+						<td>8</td>
+						<td>55 KG</td>
+					</tr>
+				</tbody>
+				
+				<tfoot>
+					<tr>
+						<td colspan="4">Gesamt: 12 Sätze</td>
+					</tr>
+				</tfoot>	
+			</table>
+			  			
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" class="customNavBar">
+				<ul>
+					<li><a href="#training-1" id="train" data-icon="custom" data-transition="none" class="ui-btn-active">Trainieren</a></li>
+					<li><a href="#" id="plans" data-icon="custom" data-transition="none">Trainingspläne</a></li>
+					<li><a href="#" id="settings" data-icon="custom" data-transition="none">Einstellungen</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<!-- END: Page "training-3" (Selected excercise) -->
 </body>
 </html>
 
