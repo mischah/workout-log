@@ -40,7 +40,8 @@
 			stopWatchTimer.text(data.time);
 		});
 		
-		stopWatchButton.bind('click', function(){
+		stopWatchButton.bind('click', function(e){
+			e.preventDefault();
 			if (stopWatchButton.hasClass('active')) {
 				stopWatchButton.trigger('stop');
 			}
