@@ -25,6 +25,17 @@
   height: 18px;
   width: 18px;
 }
+#exercise div {
+  overflow: visible;
+  zoom: 1;
+}
+#exercise div:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
 #exercise input.ui-input-text {
   margin-left: 5px;
   width: 84%;
