@@ -84,19 +84,22 @@
 	<div data-role="page" id="plans-3">
 	
 		<div data-role="header" data-position="fixed" data-theme="a">
-			<h1>Neuer Plan</h1>
+			<h1>Plan anlegen</h1>
 		</div>
 		
 		<div data-role="content">			
 			<label for="plan">Name des neuen Trainingplans</label>
 			<input type="text" name="plan" id="plan" value=""/>
-		
+			
+			<label for="plan">Satzpause (in Sekunden)</label>
+			<input type="number" name="plan" id="plan" value="60"/>
+			
 			<fieldset class="ui-grid-a">
 				<div class="ui-block-a">
 					<a href="#plans-1" data-role="button" data-theme="c" data-direction="reverse">Abbrechen</a>
 				</div>
 				<div class="ui-block-b">
-					<button type="submit" data-theme="a">Speichern</button>
+					<a href="#plans-4" data-role="button" data-theme="a">Speichern</a>
 				</div>	   
 			</fieldset>
 		</div>
@@ -113,6 +116,33 @@
 		
 	</div>
 	<!-- END: Page "plans-3" (create new plan) -->
+	
+	<!-- BEGIN: Page "plans-4" (blank plan) -->
+	<div data-role="page" id="plans-4">
+	
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Neuer Plan</h1>
+			<a href="#plans-1" data-icon="arrow-l" data-transition="slide" data-direction="reverse">Back</a>
+		</div>
+		
+		<div data-role="content">
+			<ul data-role="listview" data-theme="d" data-split-icon="delete" data-split-theme="d">
+				<li data-theme="b" data-icon="plus"><a href="#plans-5">Übung hinzufügen</a></li>
+			</ul>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" class="customNavBar">
+				<ul>
+					<li><a href="index.html" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
+					<li><a href="#" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
+					<li><a href="#" id="settings" data-icon="custom" data-transition="none">Einstellungen</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<!-- END: Page "plans-4" (blank plan) -->
 	
 </body>
 </html>
