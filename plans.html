@@ -33,17 +33,17 @@
 		
 		<div data-role="content">
 			<ul data-role="listview" data-theme="d" data-split-icon="delete" data-split-theme="d">
-				<li data-theme="b" data-icon="plus"><a href="#">Neuer Trainingsplan</a></li>
+				<li data-theme="b" data-icon="plus"><a href="#plans-3">Neuer Trainingsplan</a></li>
 				<li>
-					<a href="#plans-3">Ganzkörpertraining</a>
+					<a href="#">Ganzkörpertraining</a>
 					<a href="#plans-2" data-rel="dialog" data-transition="slideup">Delete?</a>
 				</li>
 				<li>
-					<a href="#plans-3">Zweiersplit - Tag 1</a>
+					<a href="#">Zweiersplit - Tag 1</a>
 					<a href="#plans-2" data-rel="dialog" data-transition="slideup">Delete?</a>
 				</li>
 				<li>
-					<a href="#plans-3">Zweiersplit - Tag 2</a>
+					<a href="#">Zweiersplit - Tag 2</a>
 					<a href="#plans-2" data-rel="dialog" data-transition="slideup">Delete?</a>
 				</li>
 			</ul>
@@ -53,7 +53,7 @@
 			<div data-role="navbar" class="customNavBar">
 				<ul>
 					<li><a href="index.html" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
-					<li><a href="#" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active ui-btn-up">Trainingspläne</a></li>
+					<li><a href="#" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
 					<li><a href="#" id="settings" data-icon="custom" data-transition="none">Einstellungen</a></li>
 				</ul>
 			</div>
@@ -78,7 +78,41 @@
 		</div>
 		
 	</div>
-	<!-- END: Page "plans-1" (list of workout plans) -->
+	<!-- END: Page "plans-2" (confirm deleting plan) -->
+	
+	<!-- BEGIN: Page "plans-3" (create new plan) -->
+	<div data-role="page" id="plans-3">
+	
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Neuer Plan</h1>
+		</div>
+		
+		<div data-role="content">			
+			<label for="plan">Name des neuen Trainingplans</label>
+			<input type="text" name="plan" id="plan" value=""/>
+		
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#plans-1" data-role="button" data-theme="c" data-direction="reverse">Abbrechen</a>
+				</div>
+				<div class="ui-block-b">
+					<button type="submit" data-theme="a">Speichern</button>
+				</div>	   
+			</fieldset>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" class="customNavBar">
+				<ul>
+					<li><a href="index.html" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
+					<li><a href="#" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
+					<li><a href="#" id="settings" data-icon="custom" data-transition="none">Einstellungen</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<!-- END: Page "plans-3" (create new plan) -->
 	
 </body>
 </html>
