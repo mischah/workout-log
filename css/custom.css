@@ -25,6 +25,14 @@
   height: 18px;
   width: 18px;
 }
+.ui-listview .ui-li-divider {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 15px;
+  text-shadow: 0 1px  1px #999;
+  text-transform: uppercase;
+}
 #exercise div {
   overflow: visible;
   zoom: 1;
