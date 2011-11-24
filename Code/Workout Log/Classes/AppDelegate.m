@@ -3,7 +3,7 @@
 //  Workout Log
 //
 //  Created by Michael Kühnel on 23.11.11.
-//  Copyright SMA Solar Technology AG 2011. All rights reserved.
+//  Copyright Michael Kühnel 2011. All rights reserved.
 //
 
 #import "AppDelegate.h"

@@ -259,7 +259,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
-				ORGANIZATIONNAME = "SMA Solar Technology AG";
+				ORGANIZATIONNAME = "Michael Kühnel";
 			};
 			buildConfigurationList = 4C3E5F63147DA94F00120A04 /* Build configuration list for PBXProject "Workout Log" */;
 			compatibilityVersion = "Xcode 3.2";
