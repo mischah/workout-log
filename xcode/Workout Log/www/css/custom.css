@@ -1,0 +1,126 @@
+/* Mixins
+-------------------------------------------------- */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+.center-block {
+  display: block;
+  margin: 0 auto;
+}
+#flexbox .display-box {
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+}
+/* Misc overwrites
+-------------------------------------------------- */
+.ui-listview .ui-li-icon {
+  height: 18px;
+  width: 18px;
+}
+.ui-listview .ui-li-divider {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 15px;
+  text-shadow: 0 1px  1px #999;
+  text-transform: uppercase;
+}
+#exercise div {
+  overflow: visible;
+  zoom: 1;
+}
+#exercise div:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+#exercise input.ui-input-text {
+  margin-left: 5px;
+  width: 84%;
+}
+/* Misc styles
+-------------------------------------------------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table td, table th {
+  padding: 5px;
+}
+table thead {
+  background: #ccc;
+}
+table thead th {
+  text-align: center;
+}
+table tbody tr {
+  background: #e3e3e3;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+table tbody td {
+  text-align: center;
+}
+table tfoot td {
+  border-top: 1px #333 solid;
+  font-weight: bold;
+}
+/* Custom NavBar
+-------------------------------------------------- */
+.customNavBar .ui-btn.ui-btn-up-a {
+  background: #242424;
+}
+.customNavBar .ui-btn.ui-btn-hover-a {
+  background: #212121;
+  border-color: #212121;
+}
+.customNavBar .ui-btn.ui-btn-active {
+  background: #000000;
+  border-color: #000000;
+}
+.customNavBar .ui-btn.ui-btn-active .ui-btn-inner .ui-icon {
+  background-position-y: -48px;
+}
+.customNavBar .ui-btn .ui-btn-inner {
+  padding-top: 40px !important;
+}
+.customNavBar .ui-btn .ui-btn-inner .ui-icon {
+  width: 48px!important;
+  height: 48px!important;
+  margin-left: -24px !important;
+  top: -4px !important;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -webkit-border-radius: 0 !important;
+  border-radius: 0 !important;
+  background: url(../img/icons/nav-icons.png) 0 0;
+}
+.customNavBar #train .ui-icon {
+  background-position-x: 0;
+}
+.customNavBar #plans .ui-icon {
+  background-position-x: -48px;
+}
+.customNavBar #settings .ui-icon {
+  background-position-x: -96px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 240dpi) {
+  .customNavBar .ui-btn .ui-btn-inner .ui-icon {
+    background-image: url(../img/icons/nav-icons@2x.png);
+    background-size: 144px 96px;
+  }
+}

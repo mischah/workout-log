@@ -1,0 +1,114 @@
+@import 'bootstrap.less';
+
+/* Misc overwrites
+-------------------------------------------------- */
+
+.ui-listview {
+	.ui-li-icon {
+		height: 18px; // Scaling down Retina resolution icons in listviews 
+		width: 18px;
+	}
+	.ui-li-divider {
+		color: #FFF;
+		font-size: 14px;
+		font-weight: bold;
+		padding: 5px 15px;
+		text-shadow: 0 1px  1px #999;
+		text-transform: uppercase;
+	}
+}
+
+
+#exercise {
+	div { overflow: visible; .clearfix; }
+	input.ui-input-text {
+		margin-left: 5px; 
+		width: 84%;
+	}
+}
+
+/* Misc styles
+-------------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	td,th { padding: 5px; }
+	thead {
+		background: #ccc;
+		th {	
+			text-align: center;
+		}
+	}
+	tbody {
+		tr {
+			background: #e3e3e3;
+			&:nth-child(odd) {
+				background-color: #fff;
+			}
+		}
+		td {
+			text-align: center;
+		}
+	} 
+	tfoot td {
+		border-top: 1px #333 solid;
+		font-weight: bold;
+	}
+}
+
+
+/* Custom NavBar
+-------------------------------------------------- */
+
+@navbar-defaultColor:  #242424;
+@navbar-hoverColor:  #212121;
+@navbar-activeColor:  #000;
+
+
+.customNavBar {
+	.ui-btn {
+		&.ui-btn-up-a {
+			background: @navbar-defaultColor;
+		}
+		&.ui-btn-hover-a {
+			background: @navbar-hoverColor;
+			border-color: @navbar-hoverColor;
+		}
+		&.ui-btn-active {
+			background: @navbar-activeColor;
+			border-color: @navbar-activeColor;
+			.ui-btn-inner .ui-icon {
+				background-position-y: -48px;
+			}
+		}
+		.ui-btn-inner { 
+			padding-top: 40px !important;
+			.ui-icon {
+				width: 48px!important;
+				height: 48px!important;
+				margin-left: -24px !important;
+				top: -4px !important;
+				box-shadow: none !important;
+				-moz-box-shadow: none !important;
+				-webkit-box-shadow: none !important;
+				-webkit-border-radius: 0 !important;
+				border-radius: 0 !important;
+				background: url(../img/icons/nav-icons.png) 0 0;
+			}
+		}
+	}
+	#train .ui-icon { background-position-x: 0; }
+	#plans .ui-icon { background-position-x: -48px; }
+	#settings .ui-icon { background-position-x: -96px; }
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 240dpi) {
+	.customNavBar .ui-btn .ui-btn-inner .ui-icon {
+		background-image: url(../img/icons/nav-icons@2x.png);
+		background-size: 144px 96px;
+	}
+}
