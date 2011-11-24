@@ -112,6 +112,7 @@
 				4C3E5F6D147DA94F00120A04 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		4C3E5F6D147DA94F00120A04 /* Products */ = {
 			isa = PBXGroup;
