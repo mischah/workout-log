@@ -11,38 +11,22 @@
 
 	// If you want to prevent dragging, uncomment this section
 	/*
-	function preventBehavior(e) 
-	{ 
+	function preventBehavior(e) { 
       e.preventDefault(); 
     };
 	document.addEventListener("touchmove", preventBehavior, false);
 	*/
 	
-	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
-	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-	for more details -jm */
-	/*
-	function handleOpenURL(url)
-	{
-		// TODO: do something with the url passed in.
-	}
-	*/
-	
-	function onBodyLoad()
-	{		
+	function onBodyLoad() {		
 		document.addEventListener("deviceready", onDeviceReady, false);
 	}
 	
 	/* When this function is called, PhoneGap has been initialized and is ready to roll */
-	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
-	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-	for more details -jm */
 	function onDeviceReady()
 	{
 		// do your thing!
 		//navigator.notification.alert("PhoneGap is working")
 	}
-    
     </script>
 	
 	<link rel="stylesheet" href="js/jquery/mobile/jquery.mobile-1.0.css"/>
@@ -246,8 +230,8 @@
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar" class="customNavBar">
 				<ul>
-					<li><a href="index.html" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
-					<li><a href="#" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
+					<li><a href="#training-1" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
+					<li><a href="#plans-1" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
 					<li><a href="#" id="settings" data-icon="custom" data-transition="none">Einstellungen</a></li>
 				</ul>
 			</div>
@@ -301,8 +285,8 @@
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar" class="customNavBar">
 				<ul>
-					<li><a href="index.html" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
-					<li><a href="#" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
+					<li><a href="#training-1" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
+					<li><a href="#plans-1" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
 					<li><a href="#" id="settings" data-icon="custom" data-transition="none">Einstellungen</a></li>
 				</ul>
 			</div>
@@ -328,8 +312,8 @@
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar" class="customNavBar">
 				<ul>
-					<li><a href="index.html" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
-					<li><a href="#" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
+					<li><a href="#training-1" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
+					<li><a href="#plans-1" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
 					<li><a href="#" id="settings" data-icon="custom" data-transition="none">Einstellungen</a></li>
 				</ul>
 			</div>
@@ -342,7 +326,8 @@
 	<div data-role="page" id="plans-5">
 	
 		<div data-role="header" data-position="fixed" data-theme="a">
-			<h1>Trainingspläne</h1>
+			<h1>Übungen</h1>
+            <a href="#plans-4" data-icon="arrow-l" data-transition="slide" data-direction="reverse">Back</a>
 		</div>
 		
 		<div data-role="content">
@@ -363,8 +348,8 @@
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar" class="customNavBar">
 				<ul>
-					<li><a href="index.html" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
-					<li><a href="#" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
+					<li><a href="#training-1" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
+					<li><a href="#plans-1" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
 					<li><a href="#" id="settings" data-icon="custom" data-transition="none">Einstellungen</a></li>
 				</ul>
 			</div>
@@ -372,6 +357,30 @@
 		
 	</div>
 	<!-- END: Page "plans-5" (list of exercises) -->
+    
+    <!-- BEGIN: Page "plans-6" (new exercise) -->
+	<div data-role="page" id="plans-6">
+        
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Neue Übung</h1>
+		</div>
+		
+		<div data-role="content">
+			<p>HUHU</p>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" class="customNavBar">
+				<ul>
+					<li><a href="#training-1" id="train" data-icon="custom" data-transition="none">Trainieren</a></li>
+					<li><a href="#plans-1" id="plans" data-icon="custom" data-transition="none" class="ui-btn-active">Trainingspläne</a></li>
+					<li><a href="#" id="settings" data-icon="custom" data-transition="none">Einstellungen</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<!-- END: Page "plans-6" (new exercise) -->
 </body>
 </html>
 
