@@ -4,10 +4,12 @@
 	<title>Workout Log</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-	
+    <link rel="stylesheet" href="js/jquery/mobile/jquery.mobile-1.0.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
 	<script type="text/javascript" charset="utf-8" src="js/phonegap-1.2.0.js"></script>
-	<script type="text/javascript">
-
+	<script src="js/jquery/jquery-1.6.4.min.js"></script>
+    
+    <script type="text/javascript">
 
 	// If you want to prevent dragging, uncomment this section
 	/*
@@ -22,17 +24,89 @@
 	}
 	
 	/* When this function is called, PhoneGap has been initialized and is ready to roll */
-	function onDeviceReady()
-	{
-		// do your thing!
-		//navigator.notification.alert("PhoneGap is working")
+	function onDeviceReady() {
+        
+		/* jQuery Mobile configuration options */
+		$(document).bind("mobileinit", function(){
+			// True fixed toolbars in iOS5 
+			$.mobile.touchOverflowEnabled = false;
+			// Disable toggling toolbars on tap
+			$.mobile.fixedToolbars.setTouchToggleEnabled(false);
+		});
+		
+		/* Functionalities for page '#training-3' */
+		$('#training-3').live('pageinit',function(event){
+			
+			/* Disabling submitting the form */
+			$('#exercise').submit(function() {
+				//alert('huhu');
+				return false;
+			});
+			
+			/* Handling of the stopWatch */
+			var stopWatchButton = $('.startTimer', '#stopWatch');
+			var stopWatchTimer = $('.timer', '#stopWatch');
+			
+			stopWatchButton.bind('start', function(){
+				var button = $(this);
+				stopWatch.start();
+				$('.ui-btn-text', button).text('Stop');
+			});
+			
+			stopWatchButton.bind('stop', function(){
+				var button = $(this);
+				stopWatch.stop();
+				$('.ui-btn-text', button).text('Start');
+			});
+			
+			stopWatchButton.bind('update', function(e,data){
+				stopWatchTimer.text(data.time);
+			});
+			
+			stopWatchButton.bind('click', function(e){
+				e.preventDefault();
+				if (stopWatchButton.hasClass('active')) {
+					stopWatchButton.trigger('stop');
+				}
+				else {
+					stopWatchButton.trigger('start');
+				}
+				stopWatchButton.toggleClass('active');
+			});
+			
+			/* The stopWatch iteself */
+			var stopWatch = {};
+			stopWatch.initialTime = 60;
+			stopWatch.actualTime = stopWatch.initialTime;
+			
+			stopWatch.start = function () {
+				//Start 
+				stopWatch.running = setInterval(stopWatch.run,1000); 
+			};
+			
+			stopWatch.stop = function () {
+				//Stop
+				clearInterval(stopWatch.running);
+				stopWatch.actualTime = stopWatch.initialTime;
+				$('.startTimer', '#stopWatch').trigger('update',{ time: stopWatch.actualTime });
+			};
+				
+			stopWatch.run = function () {
+				stopWatch.actualTime = stopWatch.actualTime - 1;
+				//console.log(stopWatch.actualTime);
+				$('.startTimer', '#stopWatch').trigger('update',{ time: stopWatch.actualTime });
+				if (stopWatch.actualTime == 0) {
+					navigator.notification.beep();
+					navigator.notification.vibrate();
+				}
+			};	
+			
+		});
+		
 	}
+	
     </script>
 	
-	<link rel="stylesheet" href="js/jquery/mobile/jquery.mobile-1.0.css"/>
-	<link rel="stylesheet" href="css/custom.css"/>
-	<script src="js/jquery/jquery-1.6.4.min.js"></script>
-	<script src="js/setup.js"></script>
 	<script src="js/jquery/mobile/jquery.mobile-1.0.min.js"></script>
 </head>
 <body onload="onBodyLoad()">
