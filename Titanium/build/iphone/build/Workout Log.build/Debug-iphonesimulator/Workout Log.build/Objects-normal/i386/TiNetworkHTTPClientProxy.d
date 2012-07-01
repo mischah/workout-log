@@ -35,7 +35,6 @@ dependencies: \
   /Volumes/Data/Users/michael/Documents/Workfiles/Workout\ Log/Git\ -\ Repository/Titanium/build/iphone/Classes/TiStylesheet.h \
   /Volumes/Data/Users/michael/Documents/Workfiles/Workout\ Log/Git\ -\ Repository/Titanium/build/iphone/Classes/KrollBridge.h \
   /Volumes/Data/Users/michael/Documents/Workfiles/Workout\ Log/Git\ -\ Repository/Titanium/build/iphone/Classes/TiModule.h \
-  /Volumes/Data/Users/michael/Documents/Workfiles/Workout\ Log/Git\ -\ Repository/Titanium/build/iphone/Classes/XHRBridge.h \
   /Volumes/Data/Users/michael/Documents/Workfiles/Workout\ Log/Git\ -\ Repository/Titanium/build/iphone/Classes/TiRootViewController.h \
   /Volumes/Data/Users/michael/Documents/Workfiles/Workout\ Log/Git\ -\ Repository/Titanium/build/iphone/Classes/TiRootController.h \
   /Volumes/Data/Users/michael/Documents/Workfiles/Workout\ Log/Git\ -\ Repository/Titanium/build/iphone/Classes/TiWindowProxy.h \
