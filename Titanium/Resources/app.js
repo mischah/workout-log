@@ -13,8 +13,12 @@
 // This is a single context application with mutliple windows in a stack
 (function() {
 		
-	var Window = require('ui/ApplicationWindow');
+	//var Window = require('ui/ApplicationWindow');
+	var workOutWindow = require('ui/workOutWindow'),
+	plansWindow = require('ui/plansWindow'),
+	settingsWindow = require('ui/settingsWindow');
+	
 	var ApplicationTabGroup = require('ui/ApplicationTabGroup');
 	
-	new ApplicationTabGroup(Window).open();
+	new ApplicationTabGroup(workOutWindow, plansWindow, settingsWindow).open();
 })();

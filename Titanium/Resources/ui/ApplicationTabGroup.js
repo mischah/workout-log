@@ -1,21 +1,21 @@
-function ApplicationTabGroup(Window) {
+function ApplicationTabGroup(workOutWindow, plansWindow, settingsWindow) {
 	//create module instance
 	var self = Ti.UI.createTabGroup();
 	
 	//create app tabs
-	var win1 = new Window(L('WorkOut')),
-		win2 = new Window(L('WorkoutPlans')),
-		win3 = new Window(L('settings'));
+	var win1 = new workOutWindow(),
+		win2 = new plansWindow(),
+		win3 = new settingsWindow();
 	
 	var tab1 = Ti.UI.createTab({
-		title: L('WorkOut'),
+		title: L('workOut'),
 		icon: '/images/nav_workout.png',
 		window: win1
 	});
 	win1.containingTab = tab1;
 	
 	var tab2 = Ti.UI.createTab({
-		title: L('WorkoutPlans'),
+		title: L('plans'),
 		icon: '/images/nav_plans.png',
 		window: win2
 	});

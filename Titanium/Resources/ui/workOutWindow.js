@@ -1,6 +1,6 @@
-function ApplicationWindow(title) {
+function workOutWindow() {
 	var self = Ti.UI.createWindow({
-		title:title,
+		title:L('workOut'),
 		backgroundColor:'white'
 	});
 	
@@ -24,4 +24,4 @@ function ApplicationWindow(title) {
 	return self;
 };
 
-module.exports = ApplicationWindow;
+module.exports = workOutWindow;
