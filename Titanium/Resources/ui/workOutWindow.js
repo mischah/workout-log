@@ -4,6 +4,9 @@ function workOutWindow() {
 		backgroundColor:'white'
 	});
 	
+	/* First level:
+	*  List of plans 
+	* */
 	var tableData = [ 
 		{ title: 'Ganzkörpertraining', hasChild: true },
 		{ title: 'Zweiersplit - Tag 1', hasChild: true },
@@ -15,11 +18,12 @@ function workOutWindow() {
 	});
 	self.add(table);
 	
+	/* Second level:
+	*  List of exercises 
+	* */
 	table.addEventListener('click', function(e) {
-		//alert('You clicked row '+e.row.title);
-		
 		var childWindow = Ti.UI.createWindow({
-			title: L(e.row.title),
+			title: e.row.title,
 			backgroundColor:'white'
 		});
 		
@@ -28,21 +32,63 @@ function workOutWindow() {
 		self.containingTab.open(childWindow);
 		
 		var tableData = [ 
-			{ title: 'Beinpresse', hasCheck: true },
-			{ title: 'Latziehen', hasDetail: true, hasCheck: true },
-			{ title: 'Rudern am Block', hasDetail: true, hasCheck: true },
+			{ title: 'Kniebeugen', hasDetail: true },
+			{ title: 'Beinpresse', hasDetail: true },
+			{ title: 'Wadenheben im stehen', hasDetail: true },
+			{ title: 'Wadenheben im sitzen', hasDetail: true },
+			{ title: 'Latziehen', hasDetail: true },
+			{ title: 'Rudern am Block', hasDetail: true },
 			{ title: 'Bandrücken', hasDetail: true },
 			{ title: 'Butterfly', hasDetail: true },
 			{ title: 'Schulterdrücken', hasDetail: true },
 			{ title: 'Nosebreaker', hasDetail: true },
 			{ title: 'SZ-Curls', hasDetail: true },
-			{ title: 'Scott-Curls', hasDetail: true }
+			{ title: 'Scott-Curls', hasDetail: true },
+			{ title: 'Crunches', hasDetail: true },
+			{ title: 'Beinheben', hasDetail: true }
 		];
 	
 		var table = Ti.UI.createTableView({
 			data: tableData
 		});
 		childWindow.add(table);
+		
+		/* Third level:
+		*  Detailview of exercises 
+		* */
+		table.addEventListener('click', function(e) {
+			var childWindow = Ti.UI.createWindow({
+				title: e.row.title,
+				backgroundColor:'white'
+			});
+			
+			/*
+			var view = Titanium.UI.createView({
+			   backgroundColor:'white'
+			});
+			childWindow.add(view);
+			*/
+			
+			var label1 = Ti.UI.createLabel({
+			  color: '#000',
+			  font: { fontSize:20 },
+		
+		
+			  text: 'Detailview',
+			  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+			  top: 30,
+			  height: 'auto',
+			  width: 'auto'
+			});
+			
+			childWindow.add(label1);
+			
+			//containingTab attribute must be set by parent tab group on
+			//the window for this work
+			self.containingTab.open(childWindow);
+			
+			
+		});
 		
 	});
 	
