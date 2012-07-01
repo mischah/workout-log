@@ -16,7 +16,7 @@
  */
 @protocol TiKeyboardFocusableView
 
-#pragma mark Public Titanium APIs.
+#pragma mark Public WorkoutLog APIs.
 
 /**
  Tells the view to focus.

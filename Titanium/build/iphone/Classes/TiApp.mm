@@ -658,8 +658,8 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
 		UIDevice *currentDevice = [UIDevice currentDevice];
 		NSString *currentLocaleIdentifier = [[NSLocale currentLocale] localeIdentifier];
 		NSString *currentDeviceInfo = [NSString stringWithFormat:@"%@/%@; %@; %@;",[currentDevice model],[currentDevice systemVersion],[currentDevice systemName],currentLocaleIdentifier];
-		NSString *kTitaniumUserAgentPrefix = [NSString stringWithFormat:@"%s%s%s %s%s","Appc","eler","ator","Tita","nium"];
-		userAgent = [[NSString stringWithFormat:@"%@/%s (%@)",kTitaniumUserAgentPrefix,TI_VERSION_STR,currentDeviceInfo] retain];
+		NSString *kWorkoutLogUserAgentPrefix = [NSString stringWithFormat:@"%s%s%s %s%s","Appc","eler","ator","Tita","nium"];
+		userAgent = [[NSString stringWithFormat:@"%@/%s (%@)",kWorkoutLogUserAgentPrefix,TI_VERSION_STR,currentDeviceInfo] retain];
 	}
 	return userAgent;
 }

@@ -28,7 +28,7 @@ extern NSString * const TiExceptionInternalInconsistency;
 //Should be rare, but also useful if arguments are used improperly.
 extern NSString * const TiExceptionInternalInconsistency;
 
-//Rare exceptions to indicate a bug in the _titanium code (Eg, function that a subclass should have implemented)
+//Rare exceptions to indicate a bug in the _workoutlog code (Eg, function that a subclass should have implemented)
 extern NSString * const TiExceptionUnimplementedFunction;
 
 //Rare exception in the case of malloc failure
@@ -97,7 +97,7 @@ void DoProxyDelegateReadValuesWithKeysFromProxy(UIView<TiProxyDelegate> * target
 
 
 /**
- The base class for Titanium proxies.
+ The base class for WorkoutLog proxies.
  */
 @interface TiProxy : NSObject<KrollTargetable> {
 @private

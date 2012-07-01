@@ -9,9 +9,9 @@
 
 
 // A good bit of this code was derived from the Three20 project
-// and was customized to work inside Titanium
+// and was customized to work inside WorkoutLog
 //
-// All modifications by Titanium are licensed under 
+// All modifications by WorkoutLog are licensed under 
 // the Apache License, Version 2.0
 //
 //

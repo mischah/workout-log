@@ -34,12 +34,12 @@ MAKE_SYSTEM_PROP(DONE,UIBarButtonSystemItemDone);
 MAKE_SYSTEM_PROP(FLEXIBLE_SPACE,UIBarButtonSystemItemFlexibleSpace);
 MAKE_SYSTEM_PROP(FIXED_SPACE,UIBarButtonSystemItemFixedSpace);
 
-MAKE_SYSTEM_PROP(ACTIVITY,UITitaniumNativeItemSpinner);
-MAKE_SYSTEM_PROP(SPINNER,UITitaniumNativeItemSpinner);
-MAKE_SYSTEM_PROP(INFO_LIGHT,UITitaniumNativeItemInfoLight);
-MAKE_SYSTEM_PROP(INFO_DARK,UITitaniumNativeItemInfoDark);
-MAKE_SYSTEM_PROP(DISCLOSURE,UITitaniumNativeItemDisclosure);
-MAKE_SYSTEM_PROP(CONTACT_ADD,UITitaniumNativeItemContactAdd);
+MAKE_SYSTEM_PROP(ACTIVITY,UIWorkoutLogNativeItemSpinner);
+MAKE_SYSTEM_PROP(SPINNER,UIWorkoutLogNativeItemSpinner);
+MAKE_SYSTEM_PROP(INFO_LIGHT,UIWorkoutLogNativeItemInfoLight);
+MAKE_SYSTEM_PROP(INFO_DARK,UIWorkoutLogNativeItemInfoDark);
+MAKE_SYSTEM_PROP(DISCLOSURE,UIWorkoutLogNativeItemDisclosure);
+MAKE_SYSTEM_PROP(CONTACT_ADD,UIWorkoutLogNativeItemContactAdd);
 
 
 @end

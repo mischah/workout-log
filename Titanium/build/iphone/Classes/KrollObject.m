@@ -1,6 +1,6 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2011 by Titanium, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2011 by WorkoutLog, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -520,10 +520,10 @@ bool KrollSetProperty(TiContextRef jsContext, TiObjectRef object, TiStringRef pr
 
 // forward declare these
 
-//@interface TitaniumObject : NSObject
+//@interface WorkoutLogObject : NSObject
 //@end
 
-@interface TitaniumObject (Private)
+@interface WorkoutLogObject (Private)
 -(NSDictionary*)modules;
 @end
 
@@ -541,9 +541,9 @@ void KrollPropertyNames(TiContextRef ctx, TiObjectRef object, TiPropertyNameAccu
 	{
 		id target = [o target];
 		
-		if ([o isKindOfClass:[TitaniumObject class]])
+		if ([o isKindOfClass:[WorkoutLogObject class]])
 		{
-			for (NSString *key in [[(TitaniumObject*)o modules] allKeys])
+			for (NSString *key in [[(WorkoutLogObject*)o modules] allKeys])
 			{
 				TiStringRef value = TiStringCreateWithUTF8CString([key UTF8String]);
 				TiPropertyNameAccumulatorAddName(propertyNames,value);

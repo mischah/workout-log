@@ -1,6 +1,6 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2012 by Titanium, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2012 by WorkoutLog, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -34,7 +34,7 @@ extern NSString * const TI_APPLICATION_RESOURCE_DIR;
 static NSDictionary* encodingMap = nil;
 static NSDictionary* typeMap = nil;
 static NSDictionary* sizeMap = nil;
-static NSString* kAppUUIDString = @"com.titanium.uuid"; // don't obfuscate
+static NSString* kAppUUIDString = @"com.workoutlog.uuid"; // don't obfuscate
 
 bool Base64AllocAndEncodeData(const void *inInputData, size_t inInputDataSize, char **outOutputDataPtr, size_t *outOutputDataSize)
 {

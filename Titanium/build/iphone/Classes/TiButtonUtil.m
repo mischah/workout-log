@@ -16,23 +16,23 @@
 {
 	switch (type)
 	{
-		case UITitaniumNativeItemInfoLight:
+		case UIWorkoutLogNativeItemInfoLight:
 		{
 			return [UIButton buttonWithType:UIButtonTypeInfoLight];
 		}
-		case UITitaniumNativeItemInfoDark:
+		case UIWorkoutLogNativeItemInfoDark:
 		{
 			return [UIButton buttonWithType:UIButtonTypeInfoDark];
 		}
-		case UITitaniumNativeItemDisclosure:
+		case UIWorkoutLogNativeItemDisclosure:
 		{
 			return [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 		}
-		case UITitaniumNativeItemContactAdd:
+		case UIWorkoutLogNativeItemContactAdd:
 		{
 			return [UIButton buttonWithType:UIButtonTypeContactAdd];
 		}
-		case UITitaniumNativeItemSpinner:
+		case UIWorkoutLogNativeItemSpinner:
 		{
 			UIActivityIndicatorView *button = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite] autorelease];
 			[button startAnimating];

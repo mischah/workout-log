@@ -290,13 +290,13 @@ MAKE_SYSTEM_PROP(STATE_PAUSED,AS_PAUSED);
         DebugLog(@"[WARN] Invalid mode for audio player... setting to default.");
         newMode = kAudioSessionCategory_SoloAmbientSound;
     }
-	DebugLog(@"[WARN] 'Titanium.Media.AudioPlayer.audioSessionMode' is deprecated; use 'Titanium.Media.audioSessionMode'");
+	DebugLog(@"[WARN] 'WorkoutLog.Media.AudioPlayer.audioSessionMode' is deprecated; use 'WorkoutLog.Media.audioSessionMode'");
 	[[TiMediaAudioSession sharedSession] setSessionMode:newMode];
 }
 
 -(NSNumber*)audioSessionMode
 {
-	DebugLog(@"[WARN] 'Titanium.Media.AudioPlayer.audioSessionMode' is deprecated; use 'Titanium.Media.audioSessionMode'");	
+	DebugLog(@"[WARN] 'WorkoutLog.Media.AudioPlayer.audioSessionMode' is deprecated; use 'WorkoutLog.Media.audioSessionMode'");	
     return [NSNumber numberWithUnsignedInteger:[[TiMediaAudioSession sharedSession] sessionMode]];
 }
 

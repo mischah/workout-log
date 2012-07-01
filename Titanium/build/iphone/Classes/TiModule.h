@@ -12,7 +12,7 @@
 @class TiHost;
 
 /**
- The base class for all Titanium modules
+ The base class for all WorkoutLog modules
  */
 @interface TiModule : TiProxy 
 {
@@ -49,30 +49,30 @@
 // lifecycle
 
 /**
- Titanium Platform calls this method on startup.
+ WorkoutLog Platform calls this method on startup.
  */
 -(void)startup;
 
 /**
- Titanium Platform calls this method on shutdown.
+ WorkoutLog Platform calls this method on shutdown.
  @param sender The sender of the event.
  */
 -(void)shutdown:(id)sender;
 
 /**
- Titanium Platform calls this method on suspend.
+ WorkoutLog Platform calls this method on suspend.
  @param sender The sender of the event.
  */
 -(void)suspend:(id)sender;
 
 /**
- Titanium Platform calls this method on entering background.
+ WorkoutLog Platform calls this method on entering background.
  @param sender The sender of the event.
  */
 -(void)paused:(id)sender;
 
 /**
- Titanium Platform calls this method on resume.
+ WorkoutLog Platform calls this method on resume.
  @param sender The sender of the event.
  */
 -(void)resume:(id)sender;

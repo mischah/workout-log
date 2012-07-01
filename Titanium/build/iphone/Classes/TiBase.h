@@ -56,7 +56,7 @@ extern "C" {
 	#define KMETHOD_DEBUG MEMORY_DEBUG
 #endif
 
-// in simulator we redefine to format for Titanium Developer console
+// in simulator we redefine to format for WorkoutLog Developer console
 
 
 #define TI_INLINE static __inline__
@@ -292,14 +292,14 @@ void TiExceptionThrowWithNameAndReason(NSString * exceptionName, NSString * mess
 #define DEFINE_EXCEPTIONS \
 - (void) throwException:(NSString *) reason subreason:(NSString*)subreason location:(NSString *)location\
 {\
-	NSString * exceptionName = [@"org.titanium." stringByAppendingString:NSStringFromClass([self class])];\
+	NSString * exceptionName = [@"org.workoutlog." stringByAppendingString:NSStringFromClass([self class])];\
 	NSString * message = [NSString stringWithFormat:@"%@. %@ %@",reason,(subreason!=nil?subreason:@""),(location!=nil?location:@"")];\
 	TiExceptionThrowWithNameAndReason(exceptionName,message);\
 }\
 \
 + (void) throwException:(NSString *) reason subreason:(NSString*)subreason location:(NSString *)location\
 {\
-	NSString * exceptionName = @"org.titanium";\
+	NSString * exceptionName = @"org.workoutlog";\
 	NSString * message = [NSString stringWithFormat:@"%@. %@ %@",reason,(subreason!=nil?subreason:@""),(location!=nil?location:@"")];\
 	TiExceptionThrowWithNameAndReason(exceptionName,message);\
 }\
@@ -400,28 +400,28 @@ DebugLog(@"[WARN] Ti%@.%@ DEPRECATED in %@, in favor of %@.",@"tanium",api,in,ne
 
  //MUST BE NEGATIVE, as it inhabits the same space as UIBarButtonSystemItem
 enum {
-	UITitaniumNativeItemNone = -1, 
-	UITitaniumNativeItemSpinner = -2,
-	UITitaniumNativeItemProgressBar = -3,
+	UIWorkoutLogNativeItemNone = -1, 
+	UIWorkoutLogNativeItemSpinner = -2,
+	UIWorkoutLogNativeItemProgressBar = -3,
 	
-	UITitaniumNativeItemSlider = -4,
-	UITitaniumNativeItemSwitch = -5,
-	UITitaniumNativeItemMultiButton = -6,
-	UITitaniumNativeItemSegmented = -7,
+	UIWorkoutLogNativeItemSlider = -4,
+	UIWorkoutLogNativeItemSwitch = -5,
+	UIWorkoutLogNativeItemMultiButton = -6,
+	UIWorkoutLogNativeItemSegmented = -7,
 	
-	UITitaniumNativeItemTextView = -8,
-	UITitaniumNativeItemTextField = -9,
-	UITitaniumNativeItemSearchBar = -10,
+	UIWorkoutLogNativeItemTextView = -8,
+	UIWorkoutLogNativeItemTextField = -9,
+	UIWorkoutLogNativeItemSearchBar = -10,
 	
-	UITitaniumNativeItemPicker = -11,
-	UITitaniumNativeItemDatePicker = -12,
+	UIWorkoutLogNativeItemPicker = -11,
+	UIWorkoutLogNativeItemDatePicker = -12,
 	
-	UITitaniumNativeItemInfoLight = -13,
-	UITitaniumNativeItemInfoDark = -14,
+	UIWorkoutLogNativeItemInfoLight = -13,
+	UIWorkoutLogNativeItemInfoDark = -14,
 	
-	UITitaniumNativeItemDisclosure = -15,
+	UIWorkoutLogNativeItemDisclosure = -15,
 	
-	UITitaniumNativeItemContactAdd = -16
+	UIWorkoutLogNativeItemContactAdd = -16
 };
 
 
@@ -588,7 +588,7 @@ void incrementKrollCounter();
 void decrementKrollCounter();
     
 /**
- *	TiThreadPerformOnMainThread should replace all Titanium instances of
+ *	TiThreadPerformOnMainThread should replace all WorkoutLog instances of
  *	performSelectorOnMainThread, ESPECIALLY if wait is to be yes. That way,
  *	exceptional-case main thread activities can process them outside of the
  *	standard event loop.

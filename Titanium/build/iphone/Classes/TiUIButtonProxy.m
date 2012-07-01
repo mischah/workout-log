@@ -63,10 +63,10 @@
 {
 	switch(styleCache)
 	{
-		case UITitaniumNativeItemInfoLight:
-		case UITitaniumNativeItemInfoDark:
+		case UIWorkoutLogNativeItemInfoLight:
+		case UIWorkoutLogNativeItemInfoDark:
 			return 18;
-		case UITitaniumNativeItemDisclosure:
+		case UIWorkoutLogNativeItemDisclosure:
 			return 29;
 		default: {
 			break;
@@ -79,10 +79,10 @@
 {
 	switch(styleCache)
 	{
-		case UITitaniumNativeItemInfoLight:
-		case UITitaniumNativeItemInfoDark:
+		case UIWorkoutLogNativeItemInfoLight:
+		case UIWorkoutLogNativeItemInfoDark:
 			return 19;
-		case UITitaniumNativeItemDisclosure:
+		case UIWorkoutLogNativeItemDisclosure:
 			return 31;
 		default: {
 			break;
@@ -96,9 +96,9 @@
 {
 	switch (styleCache)
 	{
-		case UITitaniumNativeItemInfoLight:
-		case UITitaniumNativeItemInfoDark:
-		case UITitaniumNativeItemDisclosure:
+		case UIWorkoutLogNativeItemInfoLight:
+		case UIWorkoutLogNativeItemInfoDark:
+		case UIWorkoutLogNativeItemDisclosure:
 			return suggestedResizing & ~(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 		default: {
 			break;

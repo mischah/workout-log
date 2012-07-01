@@ -26,13 +26,13 @@
 
 extern BOOL const TI_APPLICATION_ANALYTICS;
 
-NSString * Titanium$ModuleRequireFormat = @"(function(exports){"
+NSString * WorkoutLog$ModuleRequireFormat = @"(function(exports){"
 		"var __OXP=exports;var module={'exports':exports};%@;\n"
 		"if(module.exports !== __OXP){return module.exports;}"
 		"return exports;})({})";
 
 
-@implementation TitaniumObject
+@implementation WorkoutLogObject
 
 -(NSDictionary*)modules
 {
@@ -319,7 +319,7 @@ CFMutableSetRef	krollBridgeRegistry = nil;
 	[self removeProxies];
 	RELEASE_TO_NIL(preload);
 	RELEASE_TO_NIL(context);
-	RELEASE_TO_NIL(_titanium);
+	RELEASE_TO_NIL(_workoutlog);
 	OSSpinLockLock(&krollBridgeRegistryLock);
 	CFSetRemoveValue(krollBridgeRegistry, self);
 	OSSpinLockUnlock(&krollBridgeRegistryLock);
@@ -540,7 +540,7 @@ CFMutableSetRef	krollBridgeRegistry = nil;
 -(void)gc
 {
 	[context gc];
-	[_titanium gc];
+	[_workoutlog gc];
 }
 
 #pragma mark Delegate
@@ -552,18 +552,18 @@ CFMutableSetRef	krollBridgeRegistry = nil;
 
 -(void)didStartNewContext:(KrollContext*)kroll
 {
-	// create Titanium global object
+	// create WorkoutLog global object
     NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
     
-    // Load the "Titanium" object into the global scope
+    // Load the "WorkoutLog" object into the global scope
 	NSString *basePath = (url==nil) ? [TiHost resourcePath] : [[[url path] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"."];
-	_titanium = [[TitaniumObject alloc] initWithContext:kroll host:host context:self baseURL:[NSURL fileURLWithPath:basePath]];
+	_workoutlog = [[WorkoutLogObject alloc] initWithContext:kroll host:host context:self baseURL:[NSURL fileURLWithPath:basePath]];
 	
 	TiContextRef jsContext = [kroll context];
-	TiValueRef tiRef = [KrollObject toValue:kroll value:_titanium];
+	TiValueRef tiRef = [KrollObject toValue:kroll value:_workoutlog];
 	
-	NSString *_titaniumNS = [NSString stringWithFormat:@"T%sanium","it"];
-	TiStringRef prop = TiStringCreateWithCFString((CFStringRef) _titaniumNS);
+	NSString *_workoutlogNS = [NSString stringWithFormat:@"T%sanium","it"];
+	TiStringRef prop = TiStringCreateWithCFString((CFStringRef) _workoutlogNS);
 	TiStringRef prop2 = TiStringCreateWithCFString((CFStringRef) [NSString stringWithFormat:@"%si","T"]);
 	TiObjectRef globalRef = TiContextGetGlobalObject(jsContext);
 	TiObjectSetProperty(jsContext, globalRef, prop, tiRef, NULL, NULL);
@@ -581,7 +581,7 @@ CFMutableSetRef	krollBridgeRegistry = nil;
 	{
 		for (NSString *name in preload)
 		{
-			KrollObject *ti = (KrollObject*)[_titanium valueForKey:name];
+			KrollObject *ti = (KrollObject*)[_workoutlog valueForKey:name];
 			NSDictionary *values = [preload valueForKey:name];
 			for (id key in values)
 			{
@@ -617,7 +617,7 @@ CFMutableSetRef	krollBridgeRegistry = nil;
 		NSNotification *notification = [NSNotification notificationWithName:kTiContextShutdownNotification object:self];
 		[[NSNotificationCenter defaultCenter] postNotification:notification];
 	}
-	[_titanium gc];
+	[_workoutlog gc];
 	
 	if (shutdownCondition)
 	{
@@ -632,7 +632,7 @@ CFMutableSetRef	krollBridgeRegistry = nil;
 {
 	TiThreadPerformOnMainThread(^{[self unregisterForMemoryWarning];}, NO);
 	[self removeProxies];
-	RELEASE_TO_NIL(_titanium);
+	RELEASE_TO_NIL(_workoutlog);
     RELEASE_TO_NIL(console);
 	RELEASE_TO_NIL(context);
 	RELEASE_TO_NIL(preload);
@@ -721,7 +721,7 @@ CFMutableSetRef	krollBridgeRegistry = nil;
 
 -(id)loadCommonJSModule:(NSString*)code withPath:(NSString*)path
 {
-	NSString *js = [[NSString alloc] initWithFormat:Titanium$ModuleRequireFormat,code];
+	NSString *js = [[NSString alloc] initWithFormat:WorkoutLog$ModuleRequireFormat,code];
 
 	/* This most likely should be integrated with normal code flow, but to
 	 * minimize impact until a in-depth reconsideration of KrollContext can be
@@ -842,7 +842,7 @@ CFMutableSetRef	krollBridgeRegistry = nil;
         }
         
 		if (![wrapper respondsToSelector:@selector(replaceValue:forKey:notification:)]) {
-			@throw [NSException exceptionWithName:@"org.titanium.kroll" reason:[NSString stringWithFormat:@"Module \"%@\" failed to leave a valid exports object",path] userInfo:nil];
+			@throw [NSException exceptionWithName:@"org.workoutlog.kroll" reason:[NSString stringWithFormat:@"Module \"%@\" failed to leave a valid exports object",path] userInfo:nil];
 		}
 		
 		// register the module if it's pure JS
@@ -888,7 +888,7 @@ CFMutableSetRef	krollBridgeRegistry = nil;
 		return module;
 	}
 	
-	@throw [NSException exceptionWithName:@"org.titanium.kroll" reason:[NSString stringWithFormat:@"Couldn't find module: %@",path] userInfo:nil];
+	@throw [NSException exceptionWithName:@"org.workoutlog.kroll" reason:[NSString stringWithFormat:@"Couldn't find module: %@",path] userInfo:nil];
 }
 
 + (NSArray *)krollBridgesUsingProxy:(id)proxy

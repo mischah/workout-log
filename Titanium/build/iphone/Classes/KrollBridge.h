@@ -19,9 +19,9 @@
 
 #ifdef KROLL_COVERAGE
 # import "KrollCoverage.h"
-@interface TitaniumObject : KrollCoverageObject {
+@interface WorkoutLogObject : KrollCoverageObject {
 #else
-@interface TitaniumObject : KrollObject {
+@interface WorkoutLogObject : KrollObject {
 #endif
 @private
 	NSMutableDictionary *modules;
@@ -35,7 +35,7 @@
 -(TiModule*)moduleNamed:(NSString*)name context:(id<TiEvaluator>)context;
 @end
 
-extern NSString * Titanium$ModuleRequireFormat;
+extern NSString * WorkoutLog$ModuleRequireFormat;
 
 @interface KrollBridge : Bridge<TiEvaluator,KrollDelegate> {
 @private
@@ -44,7 +44,7 @@ extern NSString * Titanium$ModuleRequireFormat;
 	KrollContext *context;
 	NSDictionary *preload;
 	NSMutableDictionary *modules;
-	TitaniumObject *_titanium;
+	WorkoutLogObject *_workoutlog;
     KrollObject* console;
 	BOOL shutdown;
     BOOL evaluationError;

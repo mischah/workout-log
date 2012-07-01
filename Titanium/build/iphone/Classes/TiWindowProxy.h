@@ -14,7 +14,7 @@
 #import "TiViewController.h"
 
 /**
- Titanium orientation flags.
+ WorkoutLog orientation flags.
  */
 typedef enum
 {

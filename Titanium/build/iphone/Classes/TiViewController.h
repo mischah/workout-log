@@ -1,6 +1,6 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2011 by Titanium, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2011 by WorkoutLog, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  * 
@@ -73,7 +73,7 @@
 
 
 /**
- The base class for Titanium view controllers.
+ The base class for WorkoutLog view controllers.
  */
 @interface TiViewController : UIViewController
 {
