@@ -6,7 +6,3 @@
 #define USE_TI_PLATFORM
 #define USE_TI_UI
 #define USE_TI_API
-#define USE_TI_UITABGROUP
-#define USE_TI_UITAB
-#define USE_TI_UIWINDOW
-#define USE_TI_UIBUTTON

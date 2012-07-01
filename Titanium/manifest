@@ -1,8 +1,8 @@
-#appname: Workout Log
-#publisher: michael
-#url: http://www.michael-kuehnel.de
-#image: appicon.png
-#appid: workout-log
-#desc: undefined
-#type: mobile
-#guid: b8e28594-de53-4f75-9b26-26de04b243e3
+#appname:Workout Log
+#publisher:michael
+#url:http://www.michael-kuehnel.de
+#image:appicon.png
+#appid:de.michael-kuehnel.de.titanium-workout-log
+#desc:not specified
+#type:mobile
+#guid:b8e28594-de53-4f75-9b26-26de04b243e3

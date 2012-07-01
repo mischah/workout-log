@@ -14,7 +14,7 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>workout-log</string>
+			<string>de.michael-kuehnel.de.titanium-workout-log</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>workoutlog</string>
@@ -23,7 +23,7 @@
 		</dict>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>workout-log</string>
+	<string>de.michael-kuehnel.de.titanium-workout-log</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

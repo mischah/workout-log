@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="WorkOut">Trainieren</string>
+	<string name="WorkoutPlans">Trainingspläne</string>	
+	<string name="settings">Einstellungen</string>
+	<string name="openWindow">Neues Fenster öffnen</string>
+	<string name="newWindow">Neues Fenster</string>
+</resources>

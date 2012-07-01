@@ -3,26 +3,26 @@ function ApplicationTabGroup(Window) {
 	var self = Ti.UI.createTabGroup();
 	
 	//create app tabs
-	var win1 = new Window(L('Work out')),
-		win2 = new Window(L('Workout plans')),
-		win3 = new Window(L('Settings'));
+	var win1 = new Window(L('WorkOut')),
+		win2 = new Window(L('WorkoutPlans')),
+		win3 = new Window(L('settings'));
 	
 	var tab1 = Ti.UI.createTab({
-		title: L('Work out'),
+		title: L('WorkOut'),
 		icon: '/images/nav_workout.png',
 		window: win1
 	});
 	win1.containingTab = tab1;
 	
 	var tab2 = Ti.UI.createTab({
-		title: L('Workout plans'),
+		title: L('WorkoutPlans'),
 		icon: '/images/nav_plans.png',
 		window: win2
 	});
 	win2.containingTab = tab2;
 	
 	var tab3 = Ti.UI.createTab({
-		title: L('Settings'),
+		title: L('settings'),
 		icon: '/images/nav_settings.png',
 		window: win3
 	});

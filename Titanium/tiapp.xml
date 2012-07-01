@@ -8,7 +8,7 @@
         <target device="blackberry">false</target>
     </deployment-targets>
     <sdk-version>2.1.0.GA</sdk-version>
-    <id>workout-log</id>
+    <id>de.michael-kuehnel.de.titanium-workout-log</id>
     <name>Workout Log</name>
     <version>1.0</version>
     <publisher>michael</publisher>
