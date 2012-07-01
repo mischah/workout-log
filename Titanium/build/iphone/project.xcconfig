@@ -1,6 +1,0 @@
-TI_VERSION=2.1.0.GA
-TI_SDK_DIR=/Volumes/Data/Users/michael/Library/Application Support/Titanium/mobilesdk/osx/$(TI_VERSION)/iphone
-TI_APPID=de.michael-kuehnel.de.titanium-workout-log
-OTHER_LDFLAGS[sdk=iphoneos*]=$(inherited) -weak_framework iAd
-OTHER_LDFLAGS[sdk=iphonesimulator*]=$(inherited) -weak_framework iAd
-#include "module"
