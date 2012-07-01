@@ -1,7 +1,6 @@
-function renderDetailView(workOutWindow, e) {
-	var childWindow = Ti.UI.createWindow({
+function renderDetailWindow(workOutWindow, e) {
+	var detailWindow = Ti.UI.createWindow({
 		title: e.row.title,
-		//title: 'detailview',
 		backgroundColor:'white'
 	});
 	
@@ -22,11 +21,11 @@ function renderDetailView(workOutWindow, e) {
 	  width: 'auto'
 	});
 	
-	childWindow.add(label1);
+	detailWindow.add(label1);
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
-	var detailWindow = workOutWindow.containingTab.open(childWindow);
-	return detailWindow;
+	var openDetailWindow = workOutWindow.containingTab.open(detailWindow);
+	return openDetailWindow;
 };
 
-module.exports = renderDetailView;
+module.exports = renderDetailWindow;

@@ -57,7 +57,7 @@ function renderWorkOutWindow() {
 		*  Detailview of exercises 
 		* */
 		table.addEventListener('click', function(e) {
-			var renderDetailView = require('ui/workOut/detailView');
+			var renderDetailView = require('ui/workOut/exercisesDetail');
 			renderDetailView(workOutWindow, e);
 		});
 		
