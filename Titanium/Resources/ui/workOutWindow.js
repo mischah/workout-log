@@ -4,21 +4,46 @@ function workOutWindow() {
 		backgroundColor:'white'
 	});
 	
-	var button = Ti.UI.createButton({
-		height:44,
-		width:200,
-		title:L('openWindow'),
-		top:20
+	var tableData = [ 
+		{ title: 'Ganzkörpertraining', hasChild: true },
+		{ title: 'Zweiersplit - Tag 1', hasChild: true },
+		{ title: 'Zweiersplit - Tag 2', hasChild: true }
+	];
+
+	var table = Ti.UI.createTableView({
+		data: tableData
 	});
-	self.add(button);
+	self.add(table);
 	
-	button.addEventListener('click', function() {
+	table.addEventListener('click', function(e) {
+		//alert('You clicked row '+e.row.title);
+		
+		var childWindow = Ti.UI.createWindow({
+			title: L(e.row.title),
+			backgroundColor:'white'
+		});
+		
 		//containingTab attribute must be set by parent tab group on
 		//the window for this work
-		self.containingTab.open(Ti.UI.createWindow({
-			title: L('newWindow'),
-			backgroundColor: 'white'
-		}));
+		self.containingTab.open(childWindow);
+		
+		var tableData = [ 
+			{ title: 'Beinpresse', hasCheck: true },
+			{ title: 'Latziehen', hasDetail: true, hasCheck: true },
+			{ title: 'Rudern am Block', hasDetail: true, hasCheck: true },
+			{ title: 'Bandrücken', hasDetail: true },
+			{ title: 'Butterfly', hasDetail: true },
+			{ title: 'Schulterdrücken', hasDetail: true },
+			{ title: 'Nosebreaker', hasDetail: true },
+			{ title: 'SZ-Curls', hasDetail: true },
+			{ title: 'Scott-Curls', hasDetail: true }
+		];
+	
+		var table = Ti.UI.createTableView({
+			data: tableData
+		});
+		childWindow.add(table);
+		
 	});
 	
 	return self;
