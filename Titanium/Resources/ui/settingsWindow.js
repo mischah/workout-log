@@ -1,5 +1,5 @@
-function settingsWindow() {
-	var self = Ti.UI.createWindow({
+function renderSettingsWindow() {
+	var settingsWindow = Ti.UI.createWindow({
 		title:L('settings'),
 		backgroundColor:'white'
 	});
@@ -10,18 +10,18 @@ function settingsWindow() {
 		title:L('openWindow'),
 		top:20
 	});
-	self.add(button);
+	settingsWindow.add(button);
 	
 	button.addEventListener('click', function() {
 		//containingTab attribute must be set by parent tab group on
 		//the window for this work
-		self.containingTab.open(Ti.UI.createWindow({
+		settingsWindow.containingTab.open(Ti.UI.createWindow({
 			title: L('newWindow'),
 			backgroundColor: 'white'
 		}));
 	});
 	
-	return self;
+	return settingsWindow;
 };
 
-module.exports = settingsWindow;
+module.exports = renderSettingsWindow;

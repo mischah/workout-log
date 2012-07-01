@@ -1,4 +1,4 @@
-function detailView(self, e) {
+function renderDetailView(workOutWindow, e) {
 	var childWindow = Ti.UI.createWindow({
 		title: e.row.title,
 		//title: 'detailview',
@@ -15,8 +15,6 @@ function detailView(self, e) {
 	var label1 = Ti.UI.createLabel({
 	  color: '#000',
 	  font: { fontSize:20 },
-	
-	
 	  text: 'Detailview',
 	  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 	  top: 30,
@@ -27,8 +25,8 @@ function detailView(self, e) {
 	childWindow.add(label1);
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
-	var detailView = self.containingTab.open(childWindow);
-	return detailView;
+	var detailWindow = workOutWindow.containingTab.open(childWindow);
+	return detailWindow;
 };
 
-module.exports = detailView;
+module.exports = renderDetailView;

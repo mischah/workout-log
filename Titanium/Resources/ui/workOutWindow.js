@@ -1,5 +1,5 @@
-function workOutWindow() {
-	var self = Ti.UI.createWindow({
+function renderWorkOutWindow() {
+	var workOutWindow = Ti.UI.createWindow({
 		title:L('workOut'),
 		backgroundColor:'white'
 	});
@@ -16,7 +16,7 @@ function workOutWindow() {
 	var table = Ti.UI.createTableView({
 		data: tableData
 	});
-	self.add(table);
+	workOutWindow.add(table);
 	
 	/* Second level:
 	*  List of exercises 
@@ -29,7 +29,7 @@ function workOutWindow() {
 		
 		//containingTab attribute must be set by parent tab group on
 		//the window for this work
-		self.containingTab.open(childWindow);
+		workOutWindow.containingTab.open(childWindow);
 		
 		var tableData = [ 
 			{ title: 'Kniebeugen', hasDetail: true },
@@ -57,15 +57,13 @@ function workOutWindow() {
 		*  Detailview of exercises 
 		* */
 		table.addEventListener('click', function(e) {
-			
-			var detailView = require('ui/workOut/detailView');
-			detailView(self, e);
-			
+			var renderDetailView = require('ui/workOut/detailView');
+			renderDetailView(workOutWindow, e);
 		});
 		
 	});
 	
-	return self;
+	return workOutWindow;
 };
 
-module.exports = workOutWindow;
+module.exports = renderWorkOutWindow;

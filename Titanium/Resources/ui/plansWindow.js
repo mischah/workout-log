@@ -1,5 +1,5 @@
-function plansWindow() {
-	var self = Ti.UI.createWindow({
+function renderPlansWindow() {
+	var plansWindow = Ti.UI.createWindow({
 		title:L('plans'),
 		backgroundColor:'white'
 	});
@@ -10,18 +10,18 @@ function plansWindow() {
 		title:L('openWindow'),
 		top:20
 	});
-	self.add(button);
+	plansWindow.add(button);
 	
 	button.addEventListener('click', function() {
 		//containingTab attribute must be set by parent tab group on
 		//the window for this work
-		self.containingTab.open(Ti.UI.createWindow({
+		plansWindow.containingTab.open(Ti.UI.createWindow({
 			title: L('newWindow'),
 			backgroundColor: 'white'
 		}));
 	});
 	
-	return self;
+	return plansWindow;
 };
 
-module.exports = plansWindow;
+module.exports = renderPlansWindow;
