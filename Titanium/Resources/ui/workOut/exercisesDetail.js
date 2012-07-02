@@ -65,7 +65,75 @@ function renderDetailWindow(workOutWindow, e) {
 	
 	view.add(stopWatch.container);
 	
+	// begin of "entering set data" ui code
+	var enterSet = {};
+	enterSet.container = Titanium.UI.createView({
+	   heigh: 'auto',
+	   layout: 'horizontal',
+	   top: 60
+	});
 	
+	enterSet.labelWeight = Ti.UI.createLabel({
+		left: 4,
+		color: '#444444',
+		font: { fontSize: 19 },
+		text: 'Gewicht',
+		width: 238
+	});
+	
+	enterSet.enterWeight = Ti.UI.createTextField({
+		color: '#444444',
+		height: 40,
+		hintText: 'KG',
+		left: 4,
+		width: 51,
+		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
+		appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
+		autocorrect: false,
+		returnKeyType: Ti.UI.RETURNKEY_DONE
+    });
+    
+    enterSet.labelReps = Ti.UI.createLabel({
+		left: 4,
+		top: 13,
+		color: '#444444',
+		font: { fontSize: 19 },
+		text: 'Wiederholungen',
+		width: 238
+	});
+	
+	enterSet.enterReps = Ti.UI.createTextField({
+		color: '#444444',
+		height: 40,
+		//hintText: 'KG',
+		left: 4,
+		top: 6,
+		width: 51,
+		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
+		appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
+		autocorrect: false,
+		returnKeyType: Ti.UI.RETURNKEY_DONE
+    });
+    
+    enterSet.button = Titanium.UI.createButton({
+		color: '#000',
+		font: { fontSize: 19, fontWeight: 'bold' },
+		title: 'Satz speichern',
+	 	left: 0,
+	 	top: 8,
+	 	width: Ti.UI.FILL,
+	 	height: 'auto'
+	});
+    
+    enterSet.container.add(enterSet.labelWeight);
+    enterSet.container.add(enterSet.enterWeight);
+    enterSet.container.add(enterSet.labelReps);
+    enterSet.container.add(enterSet.enterReps);
+    enterSet.container.add(enterSet.button);
+    
+	view.add(enterSet.container);
 	
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
