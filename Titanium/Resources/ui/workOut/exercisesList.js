@@ -10,19 +10,17 @@ function renderListWindow(workOutWindow, e) {
 	listWindow.add(view);
 	
 	var tableData = [ 
-		{ title: 'Kniebeugen', hasDetail: true },
+		{ title: 'Kniebeugen', header: 'Beine', hasDetail: true },
 		{ title: 'Beinpresse', hasDetail: true },
 		{ title: 'Wadenheben im stehen', hasDetail: true },
 		{ title: 'Wadenheben im sitzen', hasDetail: true },
-		{ title: 'Latziehen', hasDetail: true },
+		{ title: 'Latziehen', header: 'Rücken', hasDetail: true },
 		{ title: 'Rudern am Block', hasDetail: true },
-		{ title: 'Bandrücken', hasDetail: true },
+		{ title: 'Bandrücken', header: 'Brust', hasDetail: true },
 		{ title: 'Butterfly', hasDetail: true },
-		{ title: 'Schulterdrücken', hasDetail: true },
-		{ title: 'Nosebreaker', hasDetail: true },
-		{ title: 'SZ-Curls', hasDetail: true },
-		{ title: 'Scott-Curls', hasDetail: true },
-		{ title: 'Crunches', hasDetail: true },
+		{ title: 'Schulterdrücken', header: 'Schultern', hasDetail: true },
+		{ title: 'SZ-Curls', header: 'Bizeps', hasDetail: true },
+		{ title: 'Crunches', header: 'Bauch', hasDetail: true },
 		{ title: 'Beinheben', hasDetail: true }
 	];
 

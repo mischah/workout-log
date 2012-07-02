@@ -13,7 +13,7 @@ function renderWorkOutWindow() {
 	*  List of plans 
 	* */
 	var tableData = [ 
-		{ title: 'Ganzkörpertraining', hasChild: true },
+		{ title: 'Ganzkörpertraining', header:L('plans'), hasChild: true },
 		{ title: 'Zweiersplit - Tag 1', hasChild: true },
 		{ title: 'Zweiersplit - Tag 2', hasChild: true }
 	];
