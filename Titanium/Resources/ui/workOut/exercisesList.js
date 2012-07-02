@@ -26,9 +26,8 @@ function renderListWindow(workOutWindow, e) {
 		{ title: 'Beinheben', hasDetail: true }
 	];
 
-	var table = Ti.UI.createTableView({
-		data: tableData
-	});
+	var renderDefaultTableView  = require('ui/defaults/defaultTableView');
+	var table = renderDefaultTableView(tableData);  
 	view.add(table);
 	
 	//containingTab attribute must be set by parent tab group on

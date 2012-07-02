@@ -18,10 +18,8 @@ function renderWorkOutWindow() {
 		{ title: 'Zweiersplit - Tag 2', hasChild: true }
 	];
 
-	var table = Ti.UI.createTableView({
-		data: tableData
-	});
-	
+	var renderDefaultTableView  = require('ui/defaults/defaultTableView');
+	var table = renderDefaultTableView(tableData);  
 	view.add(table);
 	
 	/* Second level:
