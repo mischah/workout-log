@@ -1,14 +1,14 @@
 function renderDetailWindow(workOutWindow, e) {
-	var detailWindow = Ti.UI.createWindow({
-		title: e.row.title,
-		backgroundColor:'white'
-	});
+	
+	// get default window
+	var defaultWindow = require('ui/defaultWindow');
+	detailWindow = defaultWindow(e.row.title);
 	
 	/*
 	var view = Titanium.UI.createView({
 	   backgroundColor:'white'
 	});
-	childWindow.add(view);
+	detailWindow.add(view);
 	*/
 	
 	var label1 = Ti.UI.createLabel({

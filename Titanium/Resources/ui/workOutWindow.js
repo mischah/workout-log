@@ -1,8 +1,13 @@
 function renderWorkOutWindow() {
-	var workOutWindow = Ti.UI.createWindow({
-		title:L('workOut'),
-		backgroundColor:'white'
-	});
+	
+	// get default window
+	var defaultWindow = require('ui/defaultWindow');
+	workOutWindow = defaultWindow(L('workOut'));
+	
+	// get default view and add him to the window
+	var defaultView = require('ui/defaultView');
+	var view = defaultView(); 
+	workOutWindow.add(view);
 	
 	/* First level:
 	*  List of plans 
@@ -16,11 +21,13 @@ function renderWorkOutWindow() {
 	var table = Ti.UI.createTableView({
 		data: tableData
 	});
-	workOutWindow.add(table);
+	
+	view.add(table);
 	
 	/* Second level:
 	*  List of exercises 
 	* */
+	
 	table.addEventListener('click', function(e) {
 		var renderListWindow = require('ui/workOut/exercisesList');
 		renderListWindow(workOutWindow, e);

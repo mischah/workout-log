@@ -1,8 +1,8 @@
 function renderSettingsWindow() {
-	var settingsWindow = Ti.UI.createWindow({
-		title:L('settings'),
-		backgroundColor:'white'
-	});
+	
+	// get default window
+	var defaultWindow = require('ui/defaultWindow');
+	settingsWindow = defaultWindow(L('settings'));
 	
 	var button = Ti.UI.createButton({
 		height:44,
@@ -10,7 +10,7 @@ function renderSettingsWindow() {
 		title:L('openWindow'),
 		top:20
 	});
-	settingsWindow.add(button);
+	//settingsWindow.add(button);
 	
 	button.addEventListener('click', function() {
 		//containingTab attribute must be set by parent tab group on

@@ -1,8 +1,13 @@
 function renderListWindow(workOutWindow, e) {
-	var childWindow = Ti.UI.createWindow({
-		title: e.row.title,
-		backgroundColor:'white'
-	});
+	
+	// get default window
+	var defaultWindow = require('ui/defaultWindow');
+	listWindow = defaultWindow(e.row.title);
+	
+	// get default view and add him to the window
+	var defaultView = require('ui/defaultView');
+	var view = defaultView(); 
+	listWindow.add(view);
 	
 	var tableData = [ 
 		{ title: 'Kniebeugen', hasDetail: true },
@@ -24,11 +29,11 @@ function renderListWindow(workOutWindow, e) {
 	var table = Ti.UI.createTableView({
 		data: tableData
 	});
-	childWindow.add(table);
+	view.add(table);
 	
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
-	var openListWindow = workOutWindow.containingTab.open(childWindow);
+	var openListWindow = workOutWindow.containingTab.open(listWindow);
 	
 	/* Third level:
 	*  Detailview of exercises 
