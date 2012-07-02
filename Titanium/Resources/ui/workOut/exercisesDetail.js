@@ -6,27 +6,67 @@ function renderDetailWindow(workOutWindow, e) {
 	
 	// get default view and add him to the window
 	var defaultView = require('ui/defaults/defaultView');
-	var container = defaultView(); 
-	detailWindow.add(container);
+	var view = defaultView(); 
+	detailWindow.add(view);
 	
-	
-	
-	
-	var label1 = Ti.UI.createLabel({
-		backgroundColor: '#ffd2d2',		
-		color: '#000',
-		font: {
-			fontSize: 18
-		},
-		text: 'Satzpause: 60 Sekunden',
-		textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
-		left: 0,
-		top: 0,
-		height: 'auto',
-		width: 'auto'
+	// begin of stopwatch ui code
+	var stopWatch = {};
+	stopWatch.container = Titanium.UI.createView({
+	   layout: 'horizontal'
 	});
 	
-	container.add(label1);
+	stopWatch.pause = Ti.UI.createLabel({
+		left: 4,
+		font: { fontSize: 19 },
+		text: 'Satzpause:'
+	});
+	
+	stopWatch.timer = Ti.UI.createLabel({
+		left: 4,
+		font: { fontSize: 19 },
+		text: '60'
+	});
+	
+	stopWatch.seconds = Ti.UI.createLabel({
+		left: 4,		
+		font: { fontSize: 19 },
+		text: 'Sekunden'
+	});
+	
+	stopWatch.button = Ti.UI.createButton({
+		
+	});
+	
+	stopWatch.button = Titanium.UI.createButton({
+		color: '#000',
+		font: { fontSize: 19, fontWeight: 'bold' },
+		title: 'Go',
+	 	left: '30',
+	 	width: 'auto',
+	 	height: 'auto'
+	});
+	
+	stopWatch.button.addEventListener('click',function(e) {
+		alert("You clicked the button");
+	});
+	
+	stopWatch.divider = Titanium.UI.createView({
+	   height: 1,
+	   width: 320,
+	   top: 10,
+	   backgroundColor: '#818181'
+	});
+	
+	stopWatch.container.add(stopWatch.pause);
+	stopWatch.container.add(stopWatch.timer);
+	stopWatch.container.add(stopWatch.seconds);
+	stopWatch.container.add(stopWatch.button);
+	stopWatch.container.add(stopWatch.divider);
+	
+	view.add(stopWatch.container);
+	
+	
+	
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
 	var openDetailWindow = workOutWindow.containingTab.open(detailWindow);
