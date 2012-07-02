@@ -8,4 +8,9 @@
 	<string name="stopWatch">Timer</string>
 	<string name="stopWatch.pause">Pause:</string>
 	<string name="stopWatch.seconds">Seconds</string>
+	<string name="enterSet.labelWeight">Weight</string>
+	<string name="enterSet.placeholderWeight">lbs.</string>
+	<string name="enterSet.labelReps">Repetitions</string>
+	<string name="enterSet.placeholderReps"></string>
+	<string name="enterSet.button">Save set</string>
 </resources>

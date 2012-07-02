@@ -77,14 +77,14 @@ function renderDetailWindow(workOutWindow, e) {
 		left: 4,
 		color: '#444444',
 		font: { fontSize: 19 },
-		text: 'Gewicht',
+		text: L('enterSet.labelWeight'),
 		width: 238
 	});
 	
 	enterSet.enterWeight = Ti.UI.createTextField({
 		color: '#444444',
 		height: 40,
-		hintText: 'KG',
+		hintText: L('enterSet.placeholderWeight'),
 		left: 4,
 		width: 51,
 		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
@@ -99,14 +99,14 @@ function renderDetailWindow(workOutWindow, e) {
 		top: 13,
 		color: '#444444',
 		font: { fontSize: 19 },
-		text: 'Wiederholungen',
+		text: L('enterSet.labelReps'),
 		width: 238
 	});
 	
 	enterSet.enterReps = Ti.UI.createTextField({
 		color: '#444444',
 		height: 40,
-		//hintText: 'KG',
+		hintText: L('enterSet.placeholderReps'),
 		left: 4,
 		top: 6,
 		width: 51,
@@ -120,7 +120,7 @@ function renderDetailWindow(workOutWindow, e) {
     enterSet.button = Titanium.UI.createButton({
 		color: '#000',
 		font: { fontSize: 19, fontWeight: 'bold' },
-		title: 'Satz speichern',
+		title: L('enterSet.button'),
 	 	left: 0,
 	 	top: 8,
 	 	width: Ti.UI.FILL,
