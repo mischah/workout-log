@@ -4,24 +4,29 @@ function renderDetailWindow(workOutWindow, e) {
 	var defaultWindow = require('ui/defaults/defaultWindow');
 	detailWindow = defaultWindow(e.row.title);
 	
-	/*
-	var view = Titanium.UI.createView({
-	   backgroundColor:'white'
-	});
-	detailWindow.add(view);
-	*/
+	// get default view and add him to the window
+	var defaultView = require('ui/defaults/defaultView');
+	var container = defaultView(); 
+	detailWindow.add(container);
+	
+	
+	
 	
 	var label1 = Ti.UI.createLabel({
-	  color: '#000',
-	  font: { fontSize:20 },
-	  text: 'Detailview',
-	  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-	  top: 30,
-	  height: 'auto',
-	  width: 'auto'
+		backgroundColor: '#ffd2d2',		
+		color: '#000',
+		font: {
+			fontSize: 18
+		},
+		text: 'Satzpause: 60 Sekunden',
+		textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+		left: 0,
+		top: 0,
+		height: 'auto',
+		width: 'auto'
 	});
 	
-	detailWindow.add(label1);
+	container.add(label1);
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
 	var openDetailWindow = workOutWindow.containingTab.open(detailWindow);

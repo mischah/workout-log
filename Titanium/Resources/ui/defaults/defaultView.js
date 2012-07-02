@@ -1,14 +1,10 @@
 function renderDefaultView() {
 	
 	var defaultView = Titanium.UI.createView({
-	   /*
-	   borderRadius: 8,
-	   backgroundColor: '#eeb7b7',
-	   top: 8,
-	   right: 8,
-	   bottom: 8,
-	   left: 8
-	   */
+	   top: 10,
+	   right: 10,
+	   bottom: 10,
+	   left: 10
 	});
 	
 	return defaultView;

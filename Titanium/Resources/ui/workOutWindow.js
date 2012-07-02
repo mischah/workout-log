@@ -4,11 +4,6 @@ function renderWorkOutWindow() {
 	var defaultWindow = require('ui/defaults/defaultWindow');
 	workOutWindow = defaultWindow(L('workOut'));
 	
-	// get default view and add him to the window
-	var defaultView = require('ui/defaults/defaultView');
-	var view = defaultView(); 
-	workOutWindow.add(view);
-	
 	/* First level:
 	*  List of plans 
 	* */
@@ -20,7 +15,7 @@ function renderWorkOutWindow() {
 
 	var renderDefaultTableView  = require('ui/defaults/defaultTableView');
 	var table = renderDefaultTableView(tableData);  
-	view.add(table);
+	workOutWindow.add(table);
 	
 	/* Second level:
 	*  List of exercises 

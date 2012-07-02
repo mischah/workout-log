@@ -4,11 +4,6 @@ function renderListWindow(workOutWindow, e) {
 	var defaultWindow = require('ui/defaults/defaultWindow');
 	listWindow = defaultWindow(e.row.title);
 	
-	// get default view and add him to the window
-	var defaultView = require('ui/defaults/defaultView');
-	var view = defaultView(); 
-	listWindow.add(view);
-	
 	var tableData = [ 
 		{ title: 'Kniebeugen', header: 'Beine', hasDetail: true },
 		{ title: 'Beinpresse', hasDetail: true },
@@ -26,7 +21,7 @@ function renderListWindow(workOutWindow, e) {
 
 	var renderDefaultTableView  = require('ui/defaults/defaultTableView');
 	var table = renderDefaultTableView(tableData);  
-	view.add(table);
+	listWindow.add(table);
 	
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
