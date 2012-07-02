@@ -5,4 +5,7 @@
 	<string name="settings">Einstellungen</string>
 	<string name="openWindow">Neues Fenster öffnen</string>
 	<string name="newWindow">Neues Fenster</string>
+	<string name="stopWatch">Stoppuhr</string>
+	<string name="stopWatch.pause">Satzpause:</string>
+	<string name="stopWatch.seconds">Sekunden</string>
 </resources>

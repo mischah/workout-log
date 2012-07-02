@@ -18,7 +18,7 @@ function renderDetailWindow(workOutWindow, e) {
 	stopWatch.pause = Ti.UI.createLabel({
 		left: 4,
 		font: { fontSize: 19 },
-		text: 'Satzpause:'
+		text: L('stopWatch.pause')
 	});
 	
 	stopWatch.timer = Ti.UI.createLabel({
@@ -30,7 +30,7 @@ function renderDetailWindow(workOutWindow, e) {
 	stopWatch.seconds = Ti.UI.createLabel({
 		left: 4,		
 		font: { fontSize: 19 },
-		text: 'Sekunden'
+		text: L('stopWatch.seconds')
 	});
 	
 	stopWatch.button = Ti.UI.createButton({
