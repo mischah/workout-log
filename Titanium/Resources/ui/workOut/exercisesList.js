@@ -1,11 +1,11 @@
 function renderListWindow(workOutWindow, e) {
 	
 	// get default window
-	var defaultWindow = require('ui/defaultWindow');
+	var defaultWindow = require('ui/defaults/defaultWindow');
 	listWindow = defaultWindow(e.row.title);
 	
 	// get default view and add him to the window
-	var defaultView = require('ui/defaultView');
+	var defaultView = require('ui/defaults/defaultView');
 	var view = defaultView(); 
 	listWindow.add(view);
 	

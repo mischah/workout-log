@@ -1,11 +1,11 @@
 function renderWorkOutWindow() {
 	
 	// get default window
-	var defaultWindow = require('ui/defaultWindow');
+	var defaultWindow = require('ui/defaults/defaultWindow');
 	workOutWindow = defaultWindow(L('workOut'));
 	
 	// get default view and add him to the window
-	var defaultView = require('ui/defaultView');
+	var defaultView = require('ui/defaults/defaultView');
 	var view = defaultView(); 
 	workOutWindow.add(view);
 	

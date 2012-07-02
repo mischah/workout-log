@@ -1,7 +1,7 @@
 function renderSettingsWindow() {
 	
 	// get default window
-	var defaultWindow = require('ui/defaultWindow');
+	var defaultWindow = require('ui/defaults/defaultWindow');
 	settingsWindow = defaultWindow(L('settings'));
 	
 	var button = Ti.UI.createButton({

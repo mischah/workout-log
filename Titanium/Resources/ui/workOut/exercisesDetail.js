@@ -1,7 +1,7 @@
 function renderDetailWindow(workOutWindow, e) {
 	
 	// get default window
-	var defaultWindow = require('ui/defaultWindow');
+	var defaultWindow = require('ui/defaults/defaultWindow');
 	detailWindow = defaultWindow(e.row.title);
 	
 	/*
