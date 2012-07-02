@@ -12,13 +12,16 @@
 
 // This is a single context application with mutliple windows in a stack
 (function() {
-		
-	//var Window = require('ui/ApplicationWindow');
+	
+	// opaque black status bar
+	Ti.UI.iPhone.statusBarStyle = Ti.UI.iPhone.StatusBar.OPAQUE_BLACK
+	
+	// Require the windows for the tabs 	
 	var workOutWindow = require('ui/workOutWindow'),
 	plansWindow = require('ui/plansWindow'),
 	settingsWindow = require('ui/settingsWindow');
 	
+	// Require and create the tabgroup
 	var ApplicationTabGroup = require('ui/ApplicationTabGroup');
-	
 	new ApplicationTabGroup(workOutWindow, plansWindow, settingsWindow).open();
 })();
