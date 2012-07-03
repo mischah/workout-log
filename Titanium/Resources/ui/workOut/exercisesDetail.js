@@ -136,7 +136,48 @@ function renderDetailWindow(workOutWindow, e) {
 	view.add(enterSet.container);
 	
 		// begin of "entering set data" ui code
+	var history = {};
+	history.container = Ti.UI.createView({
+		heigh: 'auto',
+		layout: 'vertical',
+		top: 202
+	});
 	
+	history.tableHeader = Ti.UI.createLabel({
+		bottom: 5,
+		left: 10,
+		color: '#4C566C',
+		font: { fontSize: 16, fontWeight: 'bold' },
+		shadowColor: '#FFF',
+		shadowOffset: { x:1, y:1 },
+		text: 'History'
+	});
+	
+	var tableData = [
+		{ title: '4.11.2011', font: { fontSize: 12 }},
+		{ title: '4.11.2011', font: { fontSize: 12 }, backgroundColor: '#BEBEBE' },
+		{ title: '4.11.2011', font: { fontSize: 12 }},
+		{ title: '31.10.2011', font: { fontSize: 12 }, backgroundColor: '#BEBEBE' },
+		{ title: '31.10.2011', font: { fontSize: 12 }},
+		{ title: '31.10.2011', font: { fontSize: 12 }, backgroundColor: '#BEBEBE' },
+		{ title: '31.10.2011', font: { fontSize: 12 }},
+		{ title: '27.10.2011', font: { fontSize: 12 }, backgroundColor: '#BEBEBE' },
+		{ title: '27.10.2011', font: { fontSize: 12 }},
+		{ title: '27.10.2011', font: { fontSize: 12 }, backgroundColor: '#BEBEBE' },
+		{ title: '27.10.2011', font: { fontSize: 12 }}
+	];
+	
+	history.Table = Ti.UI.createTableView({
+		data: tableData,
+		rowHeight: 20,
+		separatorStyle: Ti.UI.iPhone.TableViewSeparatorStyle.NONE
+		//headerTitle: 'History',
+		//style: Ti.UI.iPhone.TableViewStyle.GROUPED,
+	});
+	
+	history.container.add(history.tableHeader);
+	history.container.add(history.Table);
+	view.add(history.container);
 	
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
