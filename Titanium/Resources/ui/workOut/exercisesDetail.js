@@ -135,7 +135,7 @@ function renderDetailWindow(workOutWindow, e) {
     
 	view.add(enterSet.container);
 	
-		// begin of "entering set data" ui code
+		// begin of "history" ui code
 	var history = {};
 	history.container = Ti.UI.createView({
 		heigh: 'auto',
