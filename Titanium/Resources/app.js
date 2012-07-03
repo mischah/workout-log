@@ -23,5 +23,7 @@
 	
 	// Require and create the tabgroup
 	var ApplicationTabGroup = require('ui/ApplicationTabGroup');
-	new ApplicationTabGroup(workOutWindow, plansWindow, settingsWindow).open();
+	new ApplicationTabGroup(workOutWindow, plansWindow, settingsWindow).open({
+		transition: Ti.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
+	});
 })();
