@@ -2,23 +2,23 @@ function renderDetailWindow(workOutWindow, e) {
 	
 	// get default window
 	var defaultWindow = require('ui/defaults/defaultWindow');
-	detailWindow = defaultWindow(e.row.title);
+	var detailWindow = defaultWindow(e.row.title);
 	
 	// get default view and add him to the window
 	var defaultView = require('ui/defaults/defaultView');
-	var view = defaultView(); 
+	var view = defaultView();
 	detailWindow.add(view);
 	
 	// begin of stopwatch ui code
 	var stopWatch = {};
-	stopWatch.container = Titanium.UI.createView({
-	   layout: 'horizontal'
+	stopWatch.container = Ti.UI.createView({
+		layout: 'horizontal'
 	});
 	
 	stopWatch.pause = Ti.UI.createLabel({
 		left: 4,
 		font: { fontSize: 19 },
-		text: L('stopWatch.pause')
+		text: Ti.Locale.getString('stopWatch.pause')
 	});
 	
 	stopWatch.timer = Ti.UI.createLabel({
@@ -28,33 +28,33 @@ function renderDetailWindow(workOutWindow, e) {
 	});
 	
 	stopWatch.seconds = Ti.UI.createLabel({
-		left: 4,		
+		left: 4,
 		font: { fontSize: 19 },
-		text: L('stopWatch.seconds')
+		text: Ti.Locale.getString('stopWatch.seconds')
 	});
 	
 	stopWatch.button = Ti.UI.createButton({
 		
 	});
 	
-	stopWatch.button = Titanium.UI.createButton({
+	stopWatch.button = Ti.UI.createButton({
 		color: '#000',
 		font: { fontSize: 19, fontWeight: 'bold' },
 		title: 'Go',
-	 	left: '30',
-	 	width: 'auto',
-	 	height: 'auto'
+		left: '30',
+		width: 'auto',
+		height: 'auto'
 	});
 	
 	stopWatch.button.addEventListener('click',function(e) {
 		alert("You clicked the button");
 	});
 	
-	stopWatch.divider = Titanium.UI.createView({
-	   height: 1,
-	   width: 320,
-	   top: 10,
-	   backgroundColor: '#818181'
+	stopWatch.divider = Ti.UI.createView({
+		height: 1,
+		width: 320,
+		top: 10,
+		backgroundColor: '#818181'
 	});
 	
 	stopWatch.container.add(stopWatch.pause);
@@ -67,24 +67,24 @@ function renderDetailWindow(workOutWindow, e) {
 	
 	// begin of "entering set data" ui code
 	var enterSet = {};
-	enterSet.container = Titanium.UI.createView({
-	   heigh: 'auto',
-	   layout: 'horizontal',
-	   top: 60
+	enterSet.container = Ti.UI.createView({
+		heigh: 'auto',
+		layout: 'horizontal',
+		top: 60
 	});
 	
 	enterSet.labelWeight = Ti.UI.createLabel({
 		left: 4,
 		color: '#444444',
 		font: { fontSize: 19 },
-		text: L('enterSet.labelWeight'),
+		text: Ti.Locale.getString('enterSet.labelWeight'),
 		width: 238
 	});
 	
 	enterSet.enterWeight = Ti.UI.createTextField({
 		color: '#444444',
 		height: 40,
-		hintText: L('enterSet.placeholderWeight'),
+		hintText: Ti.Locale.getString('enterSet.placeholderWeight'),
 		left: 4,
 		width: 51,
 		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
@@ -99,14 +99,14 @@ function renderDetailWindow(workOutWindow, e) {
 		top: 13,
 		color: '#444444',
 		font: { fontSize: 19 },
-		text: L('enterSet.labelReps'),
+		text: Ti.Locale.getString('enterSet.labelReps'),
 		width: 238
 	});
 	
 	enterSet.enterReps = Ti.UI.createTextField({
 		color: '#444444',
 		height: 40,
-		hintText: L('enterSet.placeholderReps'),
+		hintText: Ti.Locale.getString('enterSet.placeholderReps'),
 		left: 4,
 		top: 6,
 		width: 51,
@@ -117,14 +117,14 @@ function renderDetailWindow(workOutWindow, e) {
 		returnKeyType: Ti.UI.RETURNKEY_DONE
     });
     
-    enterSet.button = Titanium.UI.createButton({
+    enterSet.button = Ti.UI.createButton({
 		color: '#000',
 		font: { fontSize: 19, fontWeight: 'bold' },
-		title: L('enterSet.button'),
-	 	left: 0,
-	 	top: 8,
-	 	width: Ti.UI.FILL,
-	 	height: 'auto'
+		title: Ti.Locale.getString('enterSet.button'),
+		left: 0,
+		top: 8,
+		width: Ti.UI.FILL,
+		height: 'auto'
 	});
     
     enterSet.container.add(enterSet.labelWeight);
@@ -135,10 +135,13 @@ function renderDetailWindow(workOutWindow, e) {
     
 	view.add(enterSet.container);
 	
+		// begin of "entering set data" ui code
+	
+	
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
 	var openDetailWindow = workOutWindow.containingTab.open(detailWindow);
 	return openDetailWindow;
-};
+}
 
 module.exports = renderDetailWindow;
