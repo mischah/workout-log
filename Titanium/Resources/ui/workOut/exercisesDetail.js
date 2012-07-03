@@ -143,7 +143,7 @@ function renderDetailWindow(workOutWindow, e) {
 		top: 202
 	});
 	
-	history.tableHeader = Ti.UI.createLabel({
+	history.headline = Ti.UI.createLabel({
 		bottom: 5,
 		left: 10,
 		color: '#4C566C',
@@ -153,30 +153,109 @@ function renderDetailWindow(workOutWindow, e) {
 		text: 'History'
 	});
 	
-	var tableData = [
-		{ title: '4.11.2011', font: { fontSize: 12 }},
-		{ title: '4.11.2011', font: { fontSize: 12 }, backgroundColor: '#BEBEBE' },
-		{ title: '4.11.2011', font: { fontSize: 12 }},
-		{ title: '31.10.2011', font: { fontSize: 12 }, backgroundColor: '#BEBEBE' },
-		{ title: '31.10.2011', font: { fontSize: 12 }},
-		{ title: '31.10.2011', font: { fontSize: 12 }, backgroundColor: '#BEBEBE' },
-		{ title: '31.10.2011', font: { fontSize: 12 }},
-		{ title: '27.10.2011', font: { fontSize: 12 }, backgroundColor: '#BEBEBE' },
-		{ title: '27.10.2011', font: { fontSize: 12 }},
-		{ title: '27.10.2011', font: { fontSize: 12 }, backgroundColor: '#BEBEBE' },
-		{ title: '27.10.2011', font: { fontSize: 12 }}
-	];
+	history.createCustomView = function () {
+		var tableHeader = Ti.UI.createView({
+			backgroundColor: '#999999',
+			height: 20
+		});
+		
+		var date = Ti.UI.createLabel({
+			color: '#000',
+			text: 'Datum',
+			left: 10
+		});
+		
+		var set = Ti.UI.createLabel({
+			color: '#000',
+			text: 'Satz',
+			left: 110
+		});
+		
+		var reps = Ti.UI.createLabel({
+			color: '#000',
+			text: 'WH',
+			left: 170
+		});
+		
+		var weight = Ti.UI.createLabel({
+			color: '#000',
+			text: 'Gewicht',
+			left: 220
+		});
+		
+		tableHeader.add(date);
+		tableHeader.add(set);
+		tableHeader.add(reps);
+		tableHeader.add(weight);
+		
+		return tableHeader;
+	};
 	
-	history.Table = Ti.UI.createTableView({
-		data: tableData,
+	var tableData = [];
+	
+	history.table = Ti.UI.createTableView({
+		objName: 'table',
 		rowHeight: 20,
-		separatorStyle: Ti.UI.iPhone.TableViewSeparatorStyle.NONE
-		//headerTitle: 'History',
-		//style: Ti.UI.iPhone.TableViewStyle.GROUPED,
+		headerView: history.createCustomView(),
+		separatorStyle: Ti.UI.iPhone.TableViewSeparatorStyle.SINGLE_LINE,
+		selectionStyle: Ti.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 	
-	history.container.add(history.tableHeader);
-	history.container.add(history.Table);
+	for (var i = 0; i <= 20; i++) {
+		var row = Ti.UI.createTableViewRow({
+			className: 'row',
+			objName: 'row'
+		});
+	
+		var wrapperView = Ti.UI.createView({
+			backgroundColor: '#FFF',
+			objName: 'enabledWrapperView',
+			rowID: i,
+			width: Ti.UI.FILL,
+			height: 20
+		});
+	
+		var date = Ti.UI.createLabel({
+			color: '#000',
+			objName: 'date',
+			text: '4.11.2011',
+			left: 10
+		});
+		
+		var set = Ti.UI.createLabel({
+			color: '#000',
+			objName: 'set',
+			text: '1.',
+			left: 110
+		});
+		
+		var reps = Ti.UI.createLabel({
+			color: '#000',
+			objName: 'set',
+			text: '8',
+			left: 170
+		});
+		
+		var weight = Ti.UI.createLabel({
+			color: '#000',
+			objName: 'set',
+			text: '45 KG',
+			left: 220
+		});
+		
+		wrapperView.add(date);
+		wrapperView.add(set);
+		wrapperView.add(reps);
+		wrapperView.add(weight);
+	
+		row.add(wrapperView);
+		tableData.push(row);
+	}
+	
+	history.table.setData(tableData);
+	
+	history.container.add(history.headline);
+	history.container.add(history.table);
 	view.add(history.container);
 	
 	//containingTab attribute must be set by parent tab group on
