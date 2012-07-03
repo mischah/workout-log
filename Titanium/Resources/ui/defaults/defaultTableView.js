@@ -7,6 +7,6 @@ function renderDefaultTableView(tableData) {
 	});
 	
 	return defaultTableView;
-};
+}
 
 module.exports = renderDefaultTableView;
