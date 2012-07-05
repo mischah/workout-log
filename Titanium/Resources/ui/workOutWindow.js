@@ -2,23 +2,23 @@ function renderWorkOutWindow() {
 	
 	// get default window
 	var defaultWindow = require('ui/defaults/defaultWindow');
-	workOutWindow = defaultWindow(L('workOut'));
+	var workOutWindow = defaultWindow(Ti.Locale.getString('workOut'));
 	
 	/* First level:
-	*  List of plans 
+	*  List of plans
 	* */
-	var tableData = [ 
-		{ title: 'Ganzkörpertraining', header:L('plans'), hasChild: true },
+	var tableData = [
+		{ title: 'Ganzkörpertraining', header:Ti.Locale.getString('plans'), hasChild: true },
 		{ title: 'Zweiersplit - Tag 1', hasChild: true },
 		{ title: 'Zweiersplit - Tag 2', hasChild: true }
 	];
 
 	var renderDefaultTableView  = require('ui/defaults/defaultTableView');
-	var table = renderDefaultTableView(tableData);  
+	var table = renderDefaultTableView(tableData);
 	workOutWindow.add(table);
 	
 	/* Second level:
-	*  List of exercises 
+	*  List of exercises
 	* */
 	
 	table.addEventListener('click', function(e) {
@@ -27,6 +27,6 @@ function renderWorkOutWindow() {
 	});
 	
 	return workOutWindow;
-};
+}
 
 module.exports = renderWorkOutWindow;
