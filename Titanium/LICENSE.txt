@@ -1,1 +1,22 @@
-Place your license text here.  This file will be incorporated with your app at package time.
+Shared Source License
+
+This License governs use of the accompanying Software, and your use of the Software
+constitutes acceptance of this license.
+
+You may use this Software for any non-commercial purpose, subject to the restrictions
+in this license. Some purposes which can be non-commercial are teaching, academic
+research, and personal experimentation. You may also distribute this Software with
+books or other teaching materials, or publish the Software on websites, that are
+intendedto teach the use of the Software.
+
+You may not use or distribute this Software or any derivative works in any form for
+commercial purposes. Examples of commercial purposes would be running business
+operations, licensing, leasing, or selling the Software, or distributing the Software
+for use with commercial products.
+
+You may modify this Software and distribute the modified Software for non-commercial
+purposes, however, you may not grant rights to the Software or derivative works that
+are broader than those provided by this License. For example, you may not distribute
+modifications of the Software under terms that would permit commercial use, or under
+terms that purport to require the Software or derivative works to be sublicensed to
+others.
