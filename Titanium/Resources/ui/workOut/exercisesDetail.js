@@ -180,7 +180,7 @@ function renderDetailWindow(workOutWindow, e) {
 		var weight = Ti.UI.createLabel({
 			color: '#000',
 			text: 'Gewicht',
-			left: 220
+			left: 225
 		});
 		
 		tableHeader.add(date);
@@ -240,7 +240,7 @@ function renderDetailWindow(workOutWindow, e) {
 			color: '#000',
 			objName: 'set',
 			text: '45 KG',
-			left: 220
+			left: 225
 		});
 		
 		wrapperView.add(date);
