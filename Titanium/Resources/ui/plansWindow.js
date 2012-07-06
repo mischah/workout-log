@@ -30,6 +30,11 @@ function renderPlansWindow() {
 	var table = renderDefaultTableView(tableData);
 	plansWindow.add(table);
 	
+	var editButton = Ti.UI.createButton({
+		title: 'Bearbeiten'
+	});
+	plansWindow.setRightNavButton(editButton);
+	
 	/* Second level:
 	*  List of exercises
 	* */
