@@ -160,19 +160,16 @@ function renderDetailWindow(workOutWindow, e) {
 		});
 		
 		var date = Ti.UI.createLabel({
-			color: '#000',
 			text: 'Datum',
 			left: 10
 		});
 		
 		var set = Ti.UI.createLabel({
-			color: '#000',
 			text: 'Satz',
 			left: 110
 		});
 		
 		var reps = Ti.UI.createLabel({
-			color: '#000',
 			text: 'WH',
 			left: 170
 		});
