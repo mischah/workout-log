@@ -15,7 +15,9 @@ function renderPlansWindow() {
 	
 	var row = Ti.UI.createTableViewRow({
 		title: 'Neuen Plan anlegen',
-		height: 43
+		height: 43,
+		editable: false,
+		moveable: false
 	});
 
 	var image = Ti.UI.createImageView({
@@ -30,10 +32,29 @@ function renderPlansWindow() {
 	var table = renderDefaultTableView(tableData);
 	plansWindow.add(table);
 	
+	table.setEditable(true);
+	table.setMoveable(true);
+	
 	var editButton = Ti.UI.createButton({
 		title: 'Bearbeiten'
 	});
+	
 	plansWindow.setRightNavButton(editButton);
+	
+	editButton.addEventListener('click', function () {
+		plansWindow.setRightNavButton(cancelButton);
+		table.editing = true;
+	});
+	
+	var cancelButton = Ti.UI.createButton({
+		title: 'Abbrechen',
+		style: Ti.UI.iPhone.SystemButtonStyle.DONE
+	});
+	
+	cancelButton.addEventListener('click', function () {
+		plansWindow.setRightNavButton(editButton);
+		table.editing = false;
+	});
 	
 	/* Second level:
 	*  List of exercises
