@@ -89,7 +89,7 @@ function renderDetailWindow(workOutWindow, e) {
 		width: 51,
 		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
 		keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
-		appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
+		//appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
 		autocorrect: false,
 		returnKeyType: Ti.UI.RETURNKEY_DONE
     });
@@ -112,7 +112,7 @@ function renderDetailWindow(workOutWindow, e) {
 		width: 51,
 		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
 		keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
-		appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
+		//appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
 		autocorrect: false,
 		returnKeyType: Ti.UI.RETURNKEY_DONE
     });
