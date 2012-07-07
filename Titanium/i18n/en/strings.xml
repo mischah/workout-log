@@ -13,4 +13,8 @@
 	<string name="enterSet.labelReps">Repetitions</string>
 	<string name="enterSet.placeholderReps"></string>
 	<string name="enterSet.button">Save set</string>
+	<string name="availablePlans">Available plans</string>
+	<string name="newPlan">Create a new plan</string>
+	<string name="edit">Edit</string>
+	<string name="cancel">Cancel</string>
 </resources>

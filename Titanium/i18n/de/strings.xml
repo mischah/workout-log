@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 	<string name="workOut">Trainieren</string>
-	<string name="plans">Trainingspläne</string>	
+	<string name="plans">Trainingspläne</string>
 	<string name="settings">Einstellungen</string>
 	<string name="openWindow">Neues Fenster öffnen</string>
 	<string name="newWindow">Neues Fenster</string>
@@ -13,4 +13,8 @@
 	<string name="enterSet.labelReps">Wiederholungen</string>
 	<string name="enterSet.placeholderReps"></string>
 	<string name="enterSet.button">Satz speichern</string>
+	<string name="availablePlans">Verfügbare Trainingspläne</string>
+	<string name="newPlan">Neuen Trainingsplan anlegen</string>
+	<string name="edit">Bearbeiten</string>
+	<string name="cancel">Abbrechen</string>
 </resources>

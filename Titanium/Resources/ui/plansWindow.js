@@ -8,13 +8,13 @@ function renderPlansWindow() {
 	*  List of plans and first row for adding a plan
 	* */
 	var tableData = [
-		{ title: 'Ganzkörpertraining', header:Ti.Locale.getString('plans'), hasChild: true },
+		{ title: 'Ganzkörpertraining', header:Ti.Locale.getString('availablePlans'), hasChild: true },
 		{ title: 'Zweiersplit - Tag 1', hasChild: true },
 		{ title: 'Zweiersplit - Tag 2', hasChild: true }
 	];
 	
-		title: 'Neuen Plan anlegen',
 	var addRow = Ti.UI.createTableViewRow({
+		title: Ti.Locale.getString('newPlan'),
 		height: 43,
 		editable: false,
 		moveable: false
@@ -36,7 +36,7 @@ function renderPlansWindow() {
 	table.setMoveable(true);
 	
 	var editButton = Ti.UI.createButton({
-		title: 'Bearbeiten'
+		title: Ti.Locale.getString('edit')
 	});
 	
 	plansWindow.setRightNavButton(editButton);
@@ -47,7 +47,7 @@ function renderPlansWindow() {
 	});
 	
 	var cancelButton = Ti.UI.createButton({
-		title: 'Abbrechen',
+		title: Ti.Locale.getString('cancel'),
 		style: Ti.UI.iPhone.SystemButtonStyle.DONE
 	});
 	
