@@ -13,8 +13,8 @@
 	<string name="enterSet.labelReps">Wiederholungen</string>
 	<string name="enterSet.placeholderReps"></string>
 	<string name="enterSet.button">Satz speichern</string>
-	<string name="availablePlans">Verfügbare Trainingspläne</string>
-	<string name="newPlan">Neuen Trainingsplan anlegen</string>
+	<string name="availablePlans">Verfügbare Pläne</string>
+	<string name="newPlan">Neuen Plan anlegen</string>
 	<string name="edit">Bearbeiten</string>
 	<string name="cancel">Abbrechen</string>
 </resources>
