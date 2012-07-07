@@ -56,13 +56,18 @@ function renderPlansWindow() {
 		table.editing = false;
 	});
 	
-	/* Second level:
-	*  List of exercises
-	* */
-	
+		// Second level
 	table.addEventListener('click', function(e) {
-		//var renderListWindow = require('ui/workOut/exercisesList');
-		//renderListWindow(workOutWindow, e);
+		if (e.index === 0) {
+				// New plan
+			var renderAddPlanWindow = require('ui/plans/addPlan');
+			renderAddPlanWindow(plansWindow, e);
+		} else {
+				// List of exercises
+			alert('You clicked an existing plan');
+			//var renderListWindow = require('ui/workOut/exercisesList');
+			//renderListWindow(workOutWindow, e);
+		}
 	});
 	
 	return plansWindow;
