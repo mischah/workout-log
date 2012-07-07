@@ -68,23 +68,12 @@ function renderAddPlanWindow(myWindow, e) {
 		//keyboardToolbarColor : '#c6c8ce',
     });
     
-    form.buttonCancel = Ti.UI.createButton({
-		color: '#000',
-		font: { fontSize: 19, fontWeight: 'bold' },
-		title: Ti.Locale.getString('form.buttonCancel'),
-		left: 0,
-		top: 15,
-		width: 140,
-		height: 'auto'
-	});
-    
     form.buttonSave = Ti.UI.createButton({
 		color: '#000',
 		font: { fontSize: 19, fontWeight: 'bold' },
 		title: Ti.Locale.getString('form.buttonSave'),
-		left: 20,
 		top: 15,
-		width: 140,
+		width: 300,
 		height: 'auto'
 	});
     
@@ -92,7 +81,6 @@ function renderAddPlanWindow(myWindow, e) {
     form.container.add(form.enterName);
     form.container.add(form.labelPause);
     form.container.add(form.enterPause);
-    form.container.add(form.buttonCancel);
     form.container.add(form.buttonSave);
     
 	view.add(form.container);
