@@ -22,7 +22,7 @@ function renderPlansWindow() {
 
 	var image = Ti.UI.createImageView({
 		left: 264,
-		url: 'images/icon-add.png'
+		image: 'images/icon-add.png'
 	});
 	
 	row.add(image);
