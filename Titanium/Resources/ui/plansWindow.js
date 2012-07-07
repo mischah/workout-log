@@ -13,20 +13,20 @@ function renderPlansWindow() {
 		{ title: 'Zweiersplit - Tag 2', hasChild: true }
 	];
 	
-	var row = Ti.UI.createTableViewRow({
 		title: 'Neuen Plan anlegen',
+	var addRow = Ti.UI.createTableViewRow({
 		height: 43,
 		editable: false,
 		moveable: false
 	});
 
-	var image = Ti.UI.createImageView({
+	var addIcon = Ti.UI.createImageView({
 		left: 264,
 		image: 'images/icon-add.png'
 	});
 	
-	row.add(image);
-	tableData.unshift(row);
+	addRow.add(addIcon);
+	tableData.unshift(addRow);
 
 	var renderDefaultTableView  = require('ui/defaults/defaultTableView');
 	var table = renderDefaultTableView(tableData);
