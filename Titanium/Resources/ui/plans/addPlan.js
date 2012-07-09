@@ -1,3 +1,5 @@
+var defaults = require('ui/defaults/defaultProperties');
+
 function renderAddPlanWindow(myWindow, e) {
 	
 	// get default window
@@ -32,16 +34,17 @@ function renderAddPlanWindow(myWindow, e) {
 	
 	form.labelName = Ti.UI.createLabel({
 		left: 4,
-		color: '#444444',
-		font: { fontSize: 19 },
+		color: defaults.forms.labelColor,
+		font: defaults.forms.labelFont,
 		text: Ti.Locale.getString('form.labelName'),
-		width: 300
+		width: defaults.forms.fullWidth
 	});
 	
 	form.enterName = Ti.UI.createTextField({
-		color: '#444444',
-		height: 40,
-		width: 300,
+		color: defaults.forms.TextColor,
+		height: defaults.forms.TextFieldHeight,
+		font: defaults.forms.TextFieldFont,
+		width: defaults.forms.fullWidth,
 		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
 		//appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
 		returnKeyType: Ti.UI.RETURNKEY_DONE
@@ -51,16 +54,17 @@ function renderAddPlanWindow(myWindow, e) {
     form.labelPause = Ti.UI.createLabel({
 		top: 10,
 		left: 4,
-		color: '#444444',
-		font: { fontSize: 19 },
+		color: defaults.forms.labelColor,
+		font: defaults.forms.labelFont,
 		text: Ti.Locale.getString('form.labelPause'),
-		width: 300
+		width: defaults.forms.fullWidth
 	});
 	
 	form.enterPause = Ti.UI.createTextField({
-		color: '#444444',
-		height: 40,
-		width: 300,
+		color: defaults.forms.TextColor,
+		height: defaults.forms.TextFieldHeight,
+		font: defaults.forms.TextFieldFont,
+		width: defaults.forms.fullWidth,
 		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
 		//appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
 		keyboardType: Ti.UI.KEYBOARD_NUMBER_PAD,
@@ -69,12 +73,11 @@ function renderAddPlanWindow(myWindow, e) {
     });
     
     form.buttonSave = Ti.UI.createButton({
-		color: '#000',
-		font: { fontSize: 19, fontWeight: 'bold' },
+		color: defaults.forms.buttonColor,
+		font: defaults.forms.buttonFont,
 		title: Ti.Locale.getString('form.buttonSave'),
 		top: 15,
-		width: 300,
-		height: 'auto'
+		width: defaults.forms.fullWidth
 	});
     
     form.container.add(form.labelName);

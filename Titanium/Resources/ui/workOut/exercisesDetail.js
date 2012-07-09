@@ -1,3 +1,5 @@
+var defaults = require('ui/defaults/defaultProperties');
+
 function renderDetailWindow(workOutWindow, e) {
 	
 	// get default window
@@ -17,29 +19,25 @@ function renderDetailWindow(workOutWindow, e) {
 	
 	stopWatch.pause = Ti.UI.createLabel({
 		left: 4,
-		font: { fontSize: 19 },
+		font: defaults.forms.labelFont,
 		text: Ti.Locale.getString('stopWatch.pause')
 	});
 	
 	stopWatch.timer = Ti.UI.createLabel({
 		left: 4,
-		font: { fontSize: 19 },
+		font: defaults.forms.labelFont,
 		text: '60'
 	});
 	
 	stopWatch.seconds = Ti.UI.createLabel({
 		left: 4,
-		font: { fontSize: 19 },
+		font: defaults.forms.labelFont,
 		text: Ti.Locale.getString('stopWatch.seconds')
 	});
 	
 	stopWatch.button = Ti.UI.createButton({
-		
-	});
-	
-	stopWatch.button = Ti.UI.createButton({
-		color: '#000',
-		font: { fontSize: 19, fontWeight: 'bold' },
+		color: defaults.forms.buttonColor,
+		font: defaults.forms.buttonFont,
 		title: 'Go',
 		left: '30',
 		width: 'auto',
@@ -75,15 +73,16 @@ function renderDetailWindow(workOutWindow, e) {
 	
 	enterSet.labelWeight = Ti.UI.createLabel({
 		left: 4,
-		color: '#444444',
-		font: { fontSize: 19 },
+		color: defaults.forms.labelColor,
+		font: defaults.forms.labelFont,
 		text: Ti.Locale.getString('enterSet.labelWeight'),
 		width: 238
 	});
 	
 	enterSet.enterWeight = Ti.UI.createTextField({
-		color: '#444444',
-		height: 40,
+		color: defaults.forms.TextColor,
+		height: defaults.forms.TextFieldHeight,
+		font: defaults.forms.TextFieldFont,
 		hintText: Ti.Locale.getString('enterSet.placeholderWeight'),
 		left: 4,
 		width: 51,
@@ -97,15 +96,16 @@ function renderDetailWindow(workOutWindow, e) {
     enterSet.labelReps = Ti.UI.createLabel({
 		left: 4,
 		top: 13,
-		color: '#444444',
-		font: { fontSize: 19 },
+		color: defaults.forms.labelColor,
+		font: defaults.forms.labelFont,
 		text: Ti.Locale.getString('enterSet.labelReps'),
 		width: 238
 	});
 	
 	enterSet.enterReps = Ti.UI.createTextField({
-		color: '#444444',
-		height: 40,
+		color: defaults.forms.TextColor,
+		height: defaults.forms.TextFieldHeight,
+		font: defaults.forms.TextFieldFont,
 		hintText: Ti.Locale.getString('enterSet.placeholderReps'),
 		left: 4,
 		top: 6,
@@ -118,13 +118,12 @@ function renderDetailWindow(workOutWindow, e) {
     });
     
     enterSet.button = Ti.UI.createButton({
-		color: '#000',
-		font: { fontSize: 19, fontWeight: 'bold' },
+		color: defaults.forms.buttonColor,
+		font: defaults.forms.buttonFont,
 		title: Ti.Locale.getString('enterSet.button'),
 		left: 0,
 		top: 8,
-		width: Ti.UI.FILL,
-		height: 'auto'
+		width: Ti.UI.FILL
 	});
     
     enterSet.container.add(enterSet.labelWeight);
