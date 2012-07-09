@@ -17,6 +17,7 @@
 	<string name="newPlan">Neuen Plan anlegen</string>
 	<string name="edit">Bearbeiten</string>
 	<string name="cancel">Abbrechen</string>
+	<string name="done">Fertig</string>
 	<string name="form.labelName">Name</string>
 	<string name="form.labelPause">Satzpause (in Sekunden)</string>
 	<string name="form.buttonSave">Speichern</string>

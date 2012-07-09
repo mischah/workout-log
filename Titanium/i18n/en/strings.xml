@@ -17,6 +17,7 @@
 	<string name="newPlan">Create a new plan</string>
 	<string name="edit">Edit</string>
 	<string name="cancel">Cancel</string>
+	<string name="done">Done</string>
 	<string name="form.labelName">Name</string>
 	<string name="form.labelPause">Pause (in seconds)</string>
 	<string name="form.buttonSave">Save</string>
