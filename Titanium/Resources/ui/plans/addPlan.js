@@ -46,7 +46,7 @@ function renderAddPlanWindow(myWindow, e) {
 		height: defaults.forms.TextFieldHeight,
 		font: defaults.forms.TextFieldFont,
 		width: defaults.forms.fullWidth,
-		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+		borderStyle: defaults.forms.TextFieldBorderStyle,
 		//appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
 		returnKeyType: Ti.UI.RETURNKEY_DONE,
 		keyboardToolbar : [form.keyboardToolbar.flexSpace, form.keyboardToolbar.done],
@@ -69,7 +69,7 @@ function renderAddPlanWindow(myWindow, e) {
 		height: defaults.forms.TextFieldHeight,
 		font: defaults.forms.TextFieldFont,
 		width: defaults.forms.fullWidth,
-		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+		borderStyle: defaults.forms.TextFieldBorderStyle
     });
     
     form.pickerView = Ti.UI.createView({
