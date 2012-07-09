@@ -102,14 +102,21 @@ function renderAddPlanWindow(myWindow, e) {
 	
 	form.picker.selectionIndicator = true;
 	 
-	form.pickerData = [
-		Ti.UI.createPickerRow( {title:'30'}),
-		Ti.UI.createPickerRow( {title:'60'}),
-		Ti.UI.createPickerRow( {title:'90'}),
-		Ti.UI.createPickerRow( {title:'120'})
-	];
-	 
-	form.picker.add(form.pickerData);
+	//form.pickerData = [ '30', '60', '90', '120' ];
+	
+	form.pickerColumn1 = Ti.UI.createPickerColumn();
+
+	for (var i = 30, len = 240; i <= len; i = i + 30) {
+		var row = Ti.UI.createPickerRow({
+			title: i+''
+		});
+		form.pickerColumn1.addRow(row);
+	}
+	
+	form.pickerColumn2 = Ti.UI.createPickerColumn();
+	form.pickerColumn2.addRow(Ti.UI.createPickerRow({title: Ti.Locale.getString('seconds')}));
+	
+	form.picker.add([form.pickerColumn1,form.pickerColumn2]);
 	 
 	form.pickerView.add(form.pickerToolbar);
 	form.pickerView.add(form.picker);
@@ -132,7 +139,7 @@ function renderAddPlanWindow(myWindow, e) {
 	});
 	
 	form.pickerDone.addEventListener('click', function () {
-		form.enterPause.value = form.picker.getSelectedRow(0).title;
+		form.enterPause.value = form.picker.getSelectedRow(0).title + ' ' + form.picker.getSelectedRow(1).title;
 		form.pickerView.animate(form.pickerSlideOut);
 	});
     

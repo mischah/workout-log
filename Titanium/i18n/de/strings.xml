@@ -19,6 +19,7 @@
 	<string name="cancel">Abbrechen</string>
 	<string name="done">Fertig</string>
 	<string name="form.labelName">Name</string>
-	<string name="form.labelPause">Satzpause (in Sekunden)</string>
+	<string name="form.labelPause">Satzpause</string>
 	<string name="form.buttonSave">Speichern</string>
+	<string name="seconds">Sekunden</string>
 </resources>
