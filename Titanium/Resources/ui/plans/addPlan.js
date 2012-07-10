@@ -4,12 +4,12 @@ function renderAddPlanWindow(myWindow, e) {
 	
 	// get default window
 	var defaultWindow = require('ui/defaults/defaultWindow');
-	var planWindow = defaultWindow(e.row.title);
+	var addPlanWindow = defaultWindow(e.row.title);
 	
 	// get default view and add him to the window
 	var defaultView = require('ui/defaults/defaultView');
 	var view = defaultView();
-	planWindow.add(view);
+	addPlanWindow.add(view);
 	
 	// begin of the forms ui code
 	var form = {};
@@ -107,7 +107,7 @@ function renderAddPlanWindow(myWindow, e) {
 	
 	form.pickerSlideIn =  Ti.UI.createAnimation({ bottom: 0 });
 	form.pickerSlideOut =  Ti.UI.createAnimation({ bottom: -251 });
-	planWindow.add(form.pickerView);
+	addPlanWindow.add(form.pickerView);
     
     form.enterName.addEventListener('focus', function(){
 		form.pickerView.animate(form.pickerSlideOut);
@@ -150,7 +150,7 @@ function renderAddPlanWindow(myWindow, e) {
 	
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
-	var openAddPlanWindow = myWindow.containingTab.open(planWindow);
+	var openAddPlanWindow = myWindow.containingTab.open(addPlanWindow);
 	return openAddPlanWindow;
 }
 
