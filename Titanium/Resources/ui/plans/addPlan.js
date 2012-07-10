@@ -136,7 +136,8 @@ function renderAddPlanWindow(myWindow, e) {
 	});
 	
 	form.buttonSave.addEventListener('click', function () {
-		alert('You tapped the save button');
+		var renderFillPlanWindow = require('ui/plans/fillPlan');
+		renderFillPlanWindow(myWindow, form.enterName.value);
 	});
     
     form.container.add(form.labelName);
