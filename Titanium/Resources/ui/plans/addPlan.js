@@ -14,20 +14,6 @@ function renderAddPlanWindow(myWindow, e) {
 	// begin of the forms ui code
 	var form = {};
 	
-	form.keyboardToolbar = {
-		flexSpace: Ti.UI.createButton({
-			systemButton:Ti.UI.iPhone.SystemButton.FLEXIBLE_SPACE
-		}),
-		done: Ti.UI.createButton({
-			title: Ti.Locale.getString('done'),
-			style: Ti.UI.iPhone.SystemButtonStyle.DONE
-		})
-	};
-	
-	form.keyboardToolbar.done.addEventListener('click', function() {
-		form.enterName.blur();
-	});
-	
 	form.container = Ti.UI.createView({
 		heigh: 'auto',
 		layout: 'horizontal'
@@ -48,9 +34,7 @@ function renderAddPlanWindow(myWindow, e) {
 		width: defaults.forms.fullWidth,
 		borderStyle: defaults.forms.TextFieldBorderStyle,
 		//appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
-		returnKeyType: Ti.UI.RETURNKEY_DONE,
-		keyboardToolbar : [form.keyboardToolbar.flexSpace, form.keyboardToolbar.done],
-		keyboardToolbarHeight : 44
+		returnKeyType: Ti.UI.RETURNKEY_DONE
     });
     
     form.labelPause = Ti.UI.createLabel({
