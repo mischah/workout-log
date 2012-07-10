@@ -1,6 +1,6 @@
 var defaults = require('ui/defaults/defaultProperties');
 
-function renderAddPlanWindow(myWindow, e) {
+function renderAddPlanWindow(plansWindow, e) {
 	
 	// get default window
 	var defaultWindow = require('ui/defaults/defaultWindow');
@@ -137,7 +137,7 @@ function renderAddPlanWindow(myWindow, e) {
 	
 	form.buttonSave.addEventListener('click', function () {
 		var renderFillPlanWindow = require('ui/plans/fillPlan');
-		renderFillPlanWindow(myWindow, form.enterName.value);
+		renderFillPlanWindow(plansWindow, form.enterName.value);
 	});
     
     form.container.add(form.labelName);
@@ -150,7 +150,7 @@ function renderAddPlanWindow(myWindow, e) {
 	
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
-	var openAddPlanWindow = myWindow.containingTab.open(addPlanWindow);
+	var openAddPlanWindow = plansWindow.containingTab.open(addPlanWindow);
 	return openAddPlanWindow;
 }
 

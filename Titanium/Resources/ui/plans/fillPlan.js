@@ -1,6 +1,6 @@
 var defaults = require('ui/defaults/defaultProperties');
 
-function renderFillPlanWindow(myWindow, planName) {
+function renderFillPlanWindow(plansWindow, planName) {
 	
 	// get default window
 	var defaultWindow = require('ui/defaults/defaultWindow');
@@ -19,7 +19,7 @@ function renderFillPlanWindow(myWindow, planName) {
 	
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
-	var openFillPlanWindow = myWindow.containingTab.open(fillPlanWindow);
+	var openFillPlanWindow = plansWindow.containingTab.open(fillPlanWindow);
 	return openFillPlanWindow;
 }
 
