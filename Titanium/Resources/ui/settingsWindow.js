@@ -2,13 +2,13 @@ function renderSettingsWindow() {
 	
 	// get default window
 	var defaultWindow = require('ui/defaults/defaultWindow');
-	settingsWindow = defaultWindow(L('settings'));
+	var settingsWindow = defaultWindow(Ti.Locale.getString('settings'));
 	
 	var button = Ti.UI.createButton({
-		height:44,
-		width:200,
-		title:L('openWindow'),
-		top:20
+		height: 44,
+		width: 200,
+		title: Ti.Locale.getString('openWindow'),
+		top: 20
 	});
 	//settingsWindow.add(button);
 	
@@ -16,12 +16,14 @@ function renderSettingsWindow() {
 		//containingTab attribute must be set by parent tab group on
 		//the window for this work
 		settingsWindow.containingTab.open(Ti.UI.createWindow({
-			title: L('newWindow'),
+			title: Ti.Locale.getString('newWindow'),
 			backgroundColor: 'white'
 		}));
 	});
 	
+	
+	
 	return settingsWindow;
-};
+}
 
 module.exports = renderSettingsWindow;
