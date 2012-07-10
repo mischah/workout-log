@@ -65,10 +65,30 @@ function renderDetailWindow(workOutWindow, e) {
 	
 	// begin of "entering set data" ui code
 	var enterSet = {};
+	
 	enterSet.container = Ti.UI.createView({
 		heigh: 'auto',
 		layout: 'horizontal',
 		top: 60
+	});
+	
+	enterSet.keyboardToolbarItems = {
+		flexSpace: Ti.UI.createButton({
+			systemButton:Ti.UI.iPhone.SystemButton.FLEXIBLE_SPACE
+		}),
+		done: Ti.UI.createButton({
+			title: Ti.Locale.getString('done'),
+			style: Ti.UI.iPhone.SystemButtonStyle.DONE
+		})
+	};
+	
+	enterSet.keyboardToolbarItems.done.addEventListener('click', function() {
+		enterSet.enterWeight.blur();
+		enterSet.enterReps.blur();
+	});
+	
+	enterSet.keyboardToolbar = Ti.UI.iOS.createToolbar({
+		items: [enterSet.keyboardToolbarItems.flexSpace, enterSet.keyboardToolbarItems.done]
 	});
 	
 	enterSet.labelWeight = Ti.UI.createLabel({
@@ -87,10 +107,11 @@ function renderDetailWindow(workOutWindow, e) {
 		left: 4,
 		width: 51,
 		borderStyle: defaults.forms.TextFieldBorderStyle,
-		keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
+		keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
 		//appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
 		autocorrect: false,
-		returnKeyType: Ti.UI.RETURNKEY_DONE
+		keyboardToolbar : enterSet.keyboardToolbar,
+		keyboardToolbarHeight : 44
     });
     
     enterSet.labelReps = Ti.UI.createLabel({
@@ -111,10 +132,11 @@ function renderDetailWindow(workOutWindow, e) {
 		top: 6,
 		width: 51,
 		borderStyle: defaults.forms.TextFieldBorderStyle,
-		keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
+		keyboardType: Ti.UI.KEYBOARD_NUMBER_PAD,
 		//appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
 		autocorrect: false,
-		returnKeyType: Ti.UI.RETURNKEY_DONE
+		keyboardToolbar : enterSet.keyboardToolbar,
+		keyboardToolbarHeight : 44
     });
     
     enterSet.button = Ti.UI.createButton({
