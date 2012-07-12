@@ -23,4 +23,5 @@
 	<string name="form.buttonSave">Save</string>
 	<string name="seconds">Seconds</string>
 	<string name="addExercises">Add exercises</string>
+	<string name="exercises">Exercises</string>
 </resources>

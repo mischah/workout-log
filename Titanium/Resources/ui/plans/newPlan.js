@@ -33,11 +33,8 @@ function renderNewPlanWindow(plansWindow, planName) {
 		// Second level
 	table.addEventListener('click', function(e) {
 			// List of exercises
-		alert('Tappity Tap');
-		/*
-		var renderAddPlanWindow = require('ui/plans/addPlan');
-		renderAddPlanWindow(plansWindow, e);
-		*/
+		var renderExercisesWindow = require('ui/plans/exercises');
+		renderExercisesWindow(plansWindow);
 	});
 	
 	//containingTab attribute must be set by parent tab group on
