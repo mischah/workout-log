@@ -136,8 +136,8 @@ function renderAddPlanWindow(plansWindow, e) {
 	});
 	
 	form.buttonSave.addEventListener('click', function () {
-		var renderFillPlanWindow = require('ui/plans/fillPlan');
-		renderFillPlanWindow(plansWindow, form.enterName.value);
+		var renderNewPlanWindow = require('ui/plans/newPlan');
+		renderNewPlanWindow(plansWindow, form.enterName.value);
 	});
     
     form.container.add(form.labelName);

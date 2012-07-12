@@ -1,26 +1,26 @@
 var defaults = require('ui/defaults/defaultProperties');
 
-function renderFillPlanWindow(plansWindow, planName) {
+function renderNewPlanWindow(plansWindow, planName) {
 	
 	// get default window
 	var defaultWindow = require('ui/defaults/defaultWindow');
-	var fillPlanWindow = defaultWindow(planName);
+	var newPlanWindow = defaultWindow(planName);
 	
 	// get default view and add him to the window
 	var defaultView = require('ui/defaults/defaultView');
 	var view = defaultView();
-	fillPlanWindow.add(view);
+	newPlanWindow.add(view);
 	
 	var output = Ti.UI.createLabel({
-		text: 'fillPlanWindow'
+		text: 'newPlanWindow'
 	});
     
 	view.add(output);
 	
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work
-	var openFillPlanWindow = plansWindow.containingTab.open(fillPlanWindow);
-	return openFillPlanWindow;
+	var openNewPlanWindow = plansWindow.containingTab.open(newPlanWindow);
+	return openNewPlanWindow;
 }
 
-module.exports = renderFillPlanWindow;
+module.exports = renderNewPlanWindow;
