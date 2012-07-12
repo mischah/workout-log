@@ -6,16 +6,39 @@ function renderNewPlanWindow(plansWindow, planName) {
 	var defaultWindow = require('ui/defaults/defaultWindow');
 	var newPlanWindow = defaultWindow(planName);
 	
-	// get default view and add him to the window
-	var defaultView = require('ui/defaults/defaultView');
-	var view = defaultView();
-	newPlanWindow.add(view);
+	/* First level:
+	*  Just the button for adding new exercises
+	* */
+	var tableData = [];
 	
-	var output = Ti.UI.createLabel({
-		text: 'newPlanWindow'
+	var addRow = Ti.UI.createTableViewRow({
+		title: Ti.Locale.getString('addExercises'),
+		height: 43,
+		editable: false,
+		moveable: false
 	});
-    
-	view.add(output);
+
+	var addIcon = Ti.UI.createImageView({
+		left: 264,
+		image: 'images/icon-add.png'
+	});
+	
+	addRow.add(addIcon);
+	tableData.push(addRow);
+
+	var renderDefaultTableView  = require('ui/defaults/defaultTableView');
+	var table = renderDefaultTableView(tableData);
+	newPlanWindow.add(table);
+	
+		// Second level
+	table.addEventListener('click', function(e) {
+			// List of exercises
+		alert('Tappity Tap');
+		/*
+		var renderAddPlanWindow = require('ui/plans/addPlan');
+		renderAddPlanWindow(plansWindow, e);
+		*/
+	});
 	
 	//containingTab attribute must be set by parent tab group on
 	//the window for this work

@@ -22,4 +22,5 @@
 	<string name="form.labelPause">Satzpause</string>
 	<string name="form.buttonSave">Speichern</string>
 	<string name="seconds">Sekunden</string>
+	<string name="addExercises">Übungen hinzufügen</string>
 </resources>

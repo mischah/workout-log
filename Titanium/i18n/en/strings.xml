@@ -22,4 +22,5 @@
 	<string name="form.labelPause">Pause</string>
 	<string name="form.buttonSave">Save</string>
 	<string name="seconds">Seconds</string>
+	<string name="addExercises">Add exercises</string>
 </resources>
